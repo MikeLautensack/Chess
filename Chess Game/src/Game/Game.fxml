@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.FreePlayController">
+   <children>
+      <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToMain" text="Home" />
+      <Rectangle fill="#b50ea4" height="280.0" layoutX="160.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="160.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="195.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="230.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="265.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="300.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="335.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="370.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="405.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="160.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="195.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="230.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="265.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="300.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="335.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="370.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="405.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="160.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="195.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="230.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="265.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="300.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="335.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="370.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="405.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="160.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="195.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="230.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="265.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="300.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="335.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="370.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="405.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="160.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="195.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="230.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="265.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="300.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="335.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="370.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="405.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="160.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="195.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="230.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="265.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="300.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="335.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="370.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="405.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="160.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="195.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="230.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="265.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="300.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="335.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="370.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="405.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="160.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="195.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="230.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="265.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="300.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="335.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="DODGERBLUE" height="35.0" layoutX="370.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="WHITE" height="35.0" layoutX="405.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="TRANSPARENT" height="35.0" layoutX="125.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="125.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="125.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="125.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="125.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="125.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="125.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="125.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="90.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="90.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="90.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="90.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="90.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="90.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="440.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="440.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="440.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="440.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="440.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="440.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="440.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="440.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="475.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="475.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="475.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="475.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="475.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="475.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Text layoutX="139.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" />
+      <Text layoutX="139.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" />
+      <Text layoutX="139.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" />
+      <Text layoutX="139.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="139.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+      <Text layoutX="139.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+      <Text layoutX="139.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="139.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="160.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="195.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="230.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="265.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="300.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="335.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="370.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle fill="#fa973400" height="35.0" layoutX="405.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Text layoutX="174.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" />
+      <Text layoutX="209.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+      <Text layoutX="244.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+      <Text layoutX="278.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D" />
+      <Text layoutX="314.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E" />
+      <Text layoutX="350.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F" />
+      <Text layoutX="383.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G" />
+      <Text layoutX="418.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="90.0" layoutY="95.0" onDragDetected="#newBlackKing" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/BK.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="90.0" layoutY="130.0" onDragDetected="#newBlackQueen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/BQ.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="90.0" layoutY="165.0" onDragDetected="#newBlackRook" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/BR.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="90.0" layoutY="200.0" onDragDetected="#newBlackBishop" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/BB.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="90.0" layoutY="235.0" onDragDetected="#newBlackKnight" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/BN.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="90.0" layoutY="270.0" onDragDetected="#newBlackPawn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/BP.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="475.0" layoutY="95.0" onDragDetected="#newWhiteKing" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/WK.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="475.0" layoutY="130.0" onDragDetected="#newWhiteQueen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/WQ.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="475.0" layoutY="165.0" onDragDetected="#newWhiteRook" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/WR.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="475.0" layoutY="200.0" onDragDetected="#newWhiteBishop" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/WB.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="475.0" layoutY="235.0" onDragDetected="#newWhiteKnight" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/WN.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="475.0" layoutY="270.0" onDragDetected="#newWhitePawn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/WP.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="160.0" layoutY="60.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="195.0" layoutY="60.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="230.0" layoutY="60.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="265.0" layoutY="60.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="300.0" layoutY="60.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="335.0" layoutY="60.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="60.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="405.0" layoutY="60.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="160.0" layoutY="95.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="195.0" layoutY="95.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="230.0" layoutY="95.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="265.0" layoutY="95.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="300.0" layoutY="95.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="335.0" layoutY="95.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="95.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="405.0" layoutY="95.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="160.0" layoutY="130.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="195.0" layoutY="130.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="230.0" layoutY="130.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="265.0" layoutY="130.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="300.0" layoutY="130.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="335.0" layoutY="130.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="130.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="405.0" layoutY="130.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="160.0" layoutY="165.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="195.0" layoutY="165.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="230.0" layoutY="165.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="265.0" layoutY="165.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="300.0" layoutY="165.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="335.0" layoutY="165.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="165.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="405.0" layoutY="165.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="160.0" layoutY="200.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="195.0" layoutY="200.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="230.0" layoutY="200.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="265.0" layoutY="200.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="300.0" layoutY="200.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="335.0" layoutY="200.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="200.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="405.0" layoutY="200.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="160.0" layoutY="235.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="195.0" layoutY="235.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="230.0" layoutY="235.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="265.0" layoutY="235.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="300.0" layoutY="235.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="335.0" layoutY="235.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="235.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="405.0" layoutY="235.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="160.0" layoutY="270.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="195.0" layoutY="270.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="230.0" layoutY="270.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="265.0" layoutY="270.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="300.0" layoutY="270.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="335.0" layoutY="270.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="270.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="405.0" layoutY="270.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="160.0" layoutY="305.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="195.0" layoutY="305.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="230.0" layoutY="305.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="265.0" layoutY="305.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="300.0" layoutY="305.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="335.0" layoutY="305.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="305.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="405.0" layoutY="305.0" onMouseClicked="#addAndRemovePiece" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="289.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Free Play" />
+   </children>
+</AnchorPane>
