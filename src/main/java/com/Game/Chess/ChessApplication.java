@@ -1,13 +1,13 @@
-package com.Game.ChessGame;
+package com.Game.Chess;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ChessGameApplication {
+public class ChessApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ChessGameApplication.class, args);
+		SpringApplication.run(ChessApplication.class, args);
 	}
 
 }

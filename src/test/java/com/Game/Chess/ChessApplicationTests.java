@@ -1,10 +1,10 @@
-package com.Game.ChessGame;
+package com.Game.Chess;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ChessGameApplicationTests {
+class ChessApplicationTests {
 
 	@Test
 	void contextLoads() {

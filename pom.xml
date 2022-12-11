@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Game</groupId>
-	<artifactId>ChessGame</artifactId>
+	<artifactId>Chess</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ChessGame</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Chess</name>
+	<description>Chess App Project</description>
 	<properties>
 		<java.version>19</java.version>
 	</properties>
@@ -27,8 +27,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
