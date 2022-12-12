@@ -129,7 +129,7 @@ root {
 /*****General Styles*****/
 
 html {
-    background-color: rgb(6, 19, 82);
+    background-color: #2f3d4c;
 }
 
 body {
@@ -138,9 +138,49 @@ body {
 
 /*****Heading*****/
 
+.heading {
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-bar {
+    width: 90%;
+    max-width: 30rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container {
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mid {
+    width: 34%;
+    justify-content: center;
+    align-items: center;
+}
+
+.set-board-button {
+    color: green;
+    border: 1px solid green;
+    border-radius: .125rem;
+    background-color: transparent;
+    padding: .124rem .5rem;
+}
+
 h1 {
     text-align: center;
-    color: #004F88;
+    color: #839daf;
+}
+
+.play-button {
+    color: green;
+    border: 1px solid green;
+    border-radius: .125rem;
+    background-color: transparent;
+    padding: .124rem .5rem;
 }
 
 /*****Table*****/
@@ -154,7 +194,8 @@ h1 {
 /*****Board*****/
 
 .board {
-    width: 33%;
+    width: 90%;
+    max-width: 30rem;
     aspect-ratio: 1;
 }
 
@@ -186,7 +227,8 @@ h1 {
 /*****Pieces*****/
 
 .pieces {
-    width: 33%;
+    width: 90%;
+    max-width: 30rem;
     height: 80%;
 
 }
@@ -216,49 +258,49 @@ h1 {
 }
 
 .white .king {
-    background-image: url(assets/WK.gif);
+    background-image: url(assets/wK.svg);
 }
 
 .white .queen {
-    background-image: url(assets/WQ.gif);
+    background-image: url(assets/wQ.svg);
 }
 
 .white .rook {
-    background-image: url(assets/WR.gif);
+    background-image: url(assets/wR.svg);
 }
 
 .white .bishop {
-    background-image: url(assets/WB.gif);
+    background-image: url(assets/wB.svg);
 }
 
 .white .knight {
-    background-image: url(assets/WK.gif);
+    background-image: url(assets/wN.svg);
 }
 
 .white .pawn {
-    background-image: url(assets/WP.gif);
+    background-image: url(assets/wP.svg);
 }
 
 .black .king {
-    background-image: url(assets/BK.gif);
+    background-image: url(assets/bK.svg);
 }
 
 .black .queen {
-    background-image: url(assets/BQ.gif);
+    background-image: url(assets/bQ.svg);
 }
 
 .black .rook {
-    background-image: url(assets/BR.gif);
+    background-image: url(assets/bR.svg);
 }
 
 .black .bishop {
-    background-image: url(assets/BB.gif);
+    background-image: url(assets/bB.svg);
 }
 
 .black .knight {
-    background-image: url(assets/BK.gif);
+    background-image: url(assets/bN.svg);
 }
 
 .black .pawn {
-    background-image: url(assets/BP.gif);
+    background-image: url(assets/bP.svg);
 }
