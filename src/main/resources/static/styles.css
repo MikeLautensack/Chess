@@ -230,7 +230,12 @@ h1 {
     width: 90%;
     max-width: 30rem;
     height: 80%;
+}
 
+.piece {
+    width: 100%;
+    height: 100%;
+    
 }
 
 .white,
@@ -241,66 +246,71 @@ h1 {
     align-items: center;
 }
 
-.white .king,
-.white .queen,
-.white .rook,
-.white .bishop,
-.white .knight,
-.white .pawn,
-.black .king,
-.black .queen,
-.black .rook,
-.black .bishop,
-.black .knight,
-.black .pawn {
+.white-king,
+.white-queen,
+.white-rook,
+.white-bishop,
+.white-knight,
+.white-pawn,
+.black-king,
+.black-queen,
+.black-rook,
+.black-bishop,
+.black-knight,
+.black-pawn {
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 1000;
 }
 
-.white .king {
+.white-king {
     background-image: url(assets/wK.svg);
 }
 
-.white .queen {
+.white-queen {
     background-image: url(assets/wQ.svg);
 }
 
-.white .rook {
+.white-rook {
     background-image: url(assets/wR.svg);
 }
 
-.white .bishop {
+.white-bishop {
     background-image: url(assets/wB.svg);
 }
 
-.white .knight {
+.white-knight {
     background-image: url(assets/wN.svg);
 }
 
-.white .pawn {
+.white-knight-dark {
+    background-image: url(assets/wN.svg), url(assets/dark-square.jpg);
+}
+
+.white-pawn {
     background-image: url(assets/wP.svg);
 }
 
-.black .king {
+.black-king {
     background-image: url(assets/bK.svg);
 }
 
-.black .queen {
+.black-queen {
     background-image: url(assets/bQ.svg);
 }
 
-.black .rook {
+.black-rook {
     background-image: url(assets/bR.svg);
 }
 
-.black .bishop {
+.black-bishop {
     background-image: url(assets/bB.svg);
 }
 
-.black .knight {
+.black-knight {
     background-image: url(assets/bN.svg);
 }
 
-.black .pawn {
+.black-pawn {
     background-image: url(assets/bP.svg);
 }
