@@ -24,19 +24,14 @@ let pieceMoving;
 
 //piece listeners
 pieces.forEach(piece => {
-    piece.addEventListener('dragstart', e => {
+    piece.addEventListener('dragstart', () => {
         pieceMoving = piece;
         console.log('drag');
-        console.log(pieceMoving);
     })
 
     /*piece.addEventListener('dragend', () => {
 
     })*/
-
-    piece.addEventListener('click', () => {
-        console.log('click');
-    })
 })
 
 //square listeners
@@ -55,21 +50,21 @@ squares.forEach(square => {
     })*/
 
     square.addEventListener('drop', () => {
-        square.append(pieceMoving);
-        console.log('drop');
-    })
-
-    square.addEventListener('click', () => {
-        console.log('click');
-    })
-
-    
+        if(isWhitesTurn == true) {
+            if(pieceMoving.hasAttribute('data-white')) {
+                square.append(pieceMoving);
+                isWhitesTurn = false;
+            }
+        } else {
+            if(pieceMoving.hasAttribute('data-black')) {
+                square.append(pieceMoving);
+                isWhitesTurn = true;
+            }
+            console.log(isWhitesTurn);
+        }
+    })    
 })
 
 setButton.addEventListener('click', () => {
-    console.log(pieceMoving);
-    console.log(pieces);
-    console.log(squares);
-    console.log();
-    console.log();
+    console.log(isWhitesTurn);
 })

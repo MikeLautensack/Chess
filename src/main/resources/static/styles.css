@@ -284,8 +284,8 @@ h1 {
     background-image: url(assets/wN.svg);
 }
 
-.white-knight-dark {
-    background-image: url(assets/wN.svg), url(assets/dark-square.jpg);
+.white-knight {
+    background-image: url(assets/wN.svg);
 }
 
 .white-pawn {
@@ -314,4 +314,10 @@ h1 {
 
 .black-pawn {
     background-image: url(assets/bP.svg);
+}
+
+/*************************************************************************/
+
+.invisable {
+    display: none;
 }
