@@ -50,10 +50,8 @@ let squaresControlledByBlack = {
 }
 
 let isWhitesTurn = true;
+let isMoveLegal;
 let pieceMoving;
-let pieceMovingID;
-let squareID;
-let pieceMovingLegalMoves;
 
 //piece listeners
 pieces.forEach(piece => {
@@ -84,30 +82,47 @@ squares.forEach(square => {
 
     square.addEventListener('drop', () => {
 
-        //turn logic
+        isMoveLegal = isDropSquareLegal(pieceMoving, square, legalMoves);
+
+        //valid move filtering logic
         if(isWhitesTurn == true) {
             if(pieceMoving.hasAttribute('data-white')) {
-                pieceMovingID = pieceMoving.id;
-                squareID = square.id;
-                pieceMovingLegalMoves = legalMoves.pieceMovingID;
-                /*if(pieceMovingLegalMoves.includes(squareID)) {
-
-                }*/
-                square.append(pieceMoving);
-                isWhitesTurn = false;
+                if(isMoveLegal == true) {
+                    square.append(pieceMoving);
+                    isWhitesTurn = false;
+                }
             }
         } else {
             if(pieceMoving.hasAttribute('data-black')) {
-                square.append(pieceMoving);
-                isWhitesTurn = true;
+                if(isMoveLegal == true) {
+                    square.append(pieceMoving);
+                    isWhitesTurn = true;
+                }
             }
         }
-        console.log(pieceMovingLegalMoves);
-        //valid squares logic
-
     })    
 })
 
+function isDropSquareLegal(piece, square, legalMoves) {
+
+    let pieceMovingID;
+    let squareID;
+    let isSquareLegal;
+
+    pieceMovingID = piece.id;
+    squareID = square.id;
+
+    if(legalMoves[pieceMovingID].includes(squareID)) {
+        isSquareLegal = true;
+    }
+    return isSquareLegal
+}
+
 setButton.addEventListener('click', () => {
     console.log(isWhitesTurn);
+    console.log(pieceMovingID);
+    console.log(squareID);
+    console.log(pieceMovingLegalMoves);
+    console.log(pieceMovingLegalMoves);
+    console.log(pieceMovingLegalMoves);
 })
