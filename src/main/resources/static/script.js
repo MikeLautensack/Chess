@@ -104,14 +104,6 @@ let legalMoves = {
     'blackHPawn' : ['h6','h5'],
 }
 
-let squaresControlledByWhite = {
-
-}
-
-let squaresControlledByBlack = {
-
-}
-
 let isWhitesTurn = true;
 let isMoveLegal;
 let pieceMoving;
