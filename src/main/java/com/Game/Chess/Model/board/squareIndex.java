@@ -1,4 +1,4 @@
-package board;
+package com.Game.Chess.Model.board;
 
 public class squareIndex {
 

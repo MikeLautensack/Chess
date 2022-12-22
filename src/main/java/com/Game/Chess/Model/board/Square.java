@@ -1,6 +1,6 @@
-package board;
+package com.Game.Chess.Model.board;
 
-import piece.Piece;
+import com.Game.Chess.Model.piece.Piece;
 
 public class Square {
 

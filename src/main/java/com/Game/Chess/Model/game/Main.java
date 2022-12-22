@@ -1,38 +1,14 @@
-package Game;
+package com.Game.Chess.Model.game;
 
-import board.Board;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import com.Game.Chess.Model.board.Board;
 
-public class Main extends Application{
-
-    @Override
-    public void start(Stage primaryStage) { 
-        Parent root;
-try {
-    root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-    Scene scene = new Scene(root);
-
-  
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-} catch (Exception e) {
-    System.out.println(e);
-}
-  
-    }
+public class Main {
     
     public static void main(String[] args) {
 
         Board board = new Board();
 
         board.printBoard();
-
-        launch(args);
 
     }
 }

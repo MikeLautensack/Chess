@@ -1,11 +1,11 @@
-package piece;
+package com.Game.Chess.Model.piece;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Game.MovePiece;
-import board.Square;
-import board.squareIndex;
+import com.Game.Chess.Model.game.MovePiece;
+import com.Game.Chess.Model.board.Square;
+import com.Game.Chess.Model.board.squareIndex;
 
 public class Rook extends Piece implements MovePiece {
 

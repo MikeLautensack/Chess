@@ -1,7 +1,7 @@
-package Game;
+package com.Game.Chess.Model.game;
 
 import java.util.List;
-import board.Square;
+import com.Game.Chess.Model.board.Square;
 
 public interface MovePiece {
 
