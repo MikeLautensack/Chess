@@ -3,11 +3,11 @@ package com.Game.Chess.Model.piece;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.Game.Chess.Model.game.MovePiece;
+import com.Game.Chess.Model.game.getLegalMoves;
 import com.Game.Chess.Model.board.Square;
 import com.Game.Chess.Model.board.squareIndex;
 
-public class Rook extends Piece implements MovePiece {
+public class Rook extends Piece implements getLegalMoves {
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
@@ -16,12 +16,7 @@ public class Rook extends Piece implements MovePiece {
     }
 
     @Override
-    public void move() {
-        
-    }
-
-    @Override
-    public List<Square> getCandidateMoves(Square[][] boardArray, Square newSquare) {
+    public List<Square> getMoves(Square[][] boardArray, Square newSquare) {
 
         boolean firstMove = true;
         Square currentSquare;

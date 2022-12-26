@@ -9,6 +9,7 @@ public class Board {
     HashMap<Square, Square> squareIndexMap = new HashMap<>();
     String[] fileArray = {"A","B","C","D","E","F","G","H"};
 
+    //Thinking of maybe using the currentBoardConfig & legalMoves objects in the board constrcutors parameters
     public Board() {
 
         for(int i = 0; i < boardArray.length; i++) {

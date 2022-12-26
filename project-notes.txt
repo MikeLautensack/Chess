@@ -1,0 +1,12 @@
+Design idea
+
+Steps:
+
+1. Server revices post request from client containing the boardConfig json object and is then deserilized 
+into the currentBoardConfig java object using jackson library.
+
+2. a board is built in the main method - the board constructor will use the currentBoardConfig java object 
+as an arg to build and add pieces to corresponding square objects.
+
+3. Valid moves mthod is run and results are used to generate a new legalMoves java object.
+

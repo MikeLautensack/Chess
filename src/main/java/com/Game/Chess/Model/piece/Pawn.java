@@ -2,11 +2,11 @@ package com.Game.Chess.Model.piece;
 
 import java.util.ArrayList;
 
-import com.Game.Chess.Model.game.MovePiece;
+import com.Game.Chess.Model.game.getLegalMoves;
 import com.Game.Chess.Model.board.Square;
 import com.Game.Chess.Model.board.squareIndex;
 
-public class Pawn extends Piece implements MovePiece{
+public class Pawn extends Piece implements getLegalMoves{
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
@@ -19,12 +19,7 @@ public class Pawn extends Piece implements MovePiece{
     }
 
     @Override
-    public void move() {
-           
-    }
-
-    @Override
-    public ArrayList<Square> getCandidateMoves(Square[][] boardArray, Square newSquare) {
+    public ArrayList<Square> getMoves(Square[][] boardArray, Square newSquare) {
         
         boolean firstMove = true;
         Square square;
