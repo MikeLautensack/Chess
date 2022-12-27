@@ -3,6 +3,7 @@ package com.Game.Chess;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.Game.Chess.Model.board.Board;
+import com.Game.Chess.ResourceRepresentationClasses.currentBoardConfig;
 
 @SpringBootApplication
 public class ChessApplication {
@@ -32,7 +33,10 @@ public class ChessApplication {
 		System.out.println(board);
 		System.out.println();
 		board.printBoard();
-
+		currentBoardConfig boardConfig = new currentBoardConfig();
+		System.out.println();
+		System.out.println(boardConfig);
+		
 	}
 
 }
