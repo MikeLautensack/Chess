@@ -12,8 +12,11 @@ import com.Game.Chess.ResourceRepresentationClasses.legalMoves;
 @RestController
 public class GameController {
 
+    
+
     @PostMapping(path="/boardConfig")
-    public ResponseEntity<legalMoves> boardConfig(@RequestBody currentBoardConfig currentBoardConfig) {
+    public ResponseEntity<legalMoves> boardConfig(@RequestBody currentBoardConfig boardConfig) {
+        System.out.println(boardConfig); 
         return new ResponseEntity<>(
             new legalMoves(
                 null,
@@ -50,5 +53,4 @@ public class GameController {
                 null),
             HttpStatus.OK);
     }
-
 }

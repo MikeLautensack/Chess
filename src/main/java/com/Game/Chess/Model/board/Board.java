@@ -2,6 +2,8 @@ package com.Game.Chess.Model.board;
 
 import java.util.HashMap;
 
+import com.Game.Chess.ResourceRepresentationClasses.currentBoardConfig;
+
 public class Board {
 
     public Square[][] boardArray = new Square[8][8];
