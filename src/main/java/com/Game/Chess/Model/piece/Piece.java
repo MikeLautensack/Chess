@@ -4,11 +4,11 @@ import com.Game.Chess.Model.board.Square;
 
 public abstract class Piece {
 
-    pieceColor color;
+    PieceColor color;
     int material;
     Square currentSquare;
 
-    Piece(pieceColor color, int material, Square currentSqaure) {
+    Piece(PieceColor color, int material, Square currentSqaure) {
 
         this.color = color;
         this.material = material;
@@ -16,11 +16,11 @@ public abstract class Piece {
         
     }
 
-    public pieceColor getColor() {
+    public PieceColor getColor() {
         return color;
     }
 
-    public void setColor(pieceColor color) {
+    public void setColor(PieceColor color) {
         this.color = color;
     }
 

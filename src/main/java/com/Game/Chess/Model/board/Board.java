@@ -2,7 +2,7 @@ package com.Game.Chess.Model.board;
 
 import java.util.HashMap;
 
-import com.Game.Chess.ResourceRepresentationClasses.currentBoardConfig;
+import com.Game.Chess.ResourceRepresentationClasses.BoardConfig;
 
 public class Board {
 
@@ -17,13 +17,13 @@ public class Board {
         for(int i = 0; i < boardArray.length; i++) {
 
             int fileIndex = 0;
-            squareColor color = (i % 1 == 0) ? squareColor.LIGHT : squareColor.DARK;
+            SquareColor color = (i % 1 == 0) ? SquareColor.LIGHT : SquareColor.DARK;
 
             for(String file : fileArray) {
 
-                Square newSquare = new Square(false, color, new Coordinates(file, -i + 8), null, new squareIndex(fileIndex, i));
+                Square newSquare = new Square(false, color, new Coordinates(file, -i + 8), null, new SquareIndex(fileIndex, i));
                 boardArray[i][fileIndex] = newSquare;
-                color = (color == squareColor.DARK) ? squareColor.LIGHT : squareColor.DARK;
+                color = (color == SquareColor.DARK) ? SquareColor.LIGHT : SquareColor.DARK;
                 squareCoordinatesMap.put(new Coordinates(file, -i + 8), newSquare);
                 squareIndexMap.put(newSquare, boardArray[i][fileIndex]);
                 fileIndex++;

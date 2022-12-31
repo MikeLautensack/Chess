@@ -5,13 +5,13 @@ import com.Game.Chess.Model.piece.Piece;
 public class Square {
 
     boolean occupied;
-    squareColor color;
+    SquareColor color;
     Coordinates squareCoordinate;
     Piece pieceOnSquare;
-    squareIndex index;
+    SquareIndex index;
 
 
-    Square(boolean occupied, squareColor color, Coordinates squareCoordinate, Piece pieceOnSquare, squareIndex index) {
+    Square(boolean occupied, SquareColor color, Coordinates squareCoordinate, Piece pieceOnSquare, SquareIndex index) {
 
         this.occupied = occupied;
         this.color = color;
@@ -29,11 +29,11 @@ public class Square {
         this.occupied = occupied;
     }
 
-    public squareColor getColor() {
+    public SquareColor getColor() {
         return color;
     }
 
-    public void setColor(squareColor color) {
+    public void setColor(SquareColor color) {
         this.color = color;
     }
 
@@ -53,11 +53,11 @@ public class Square {
         this.pieceOnSquare = pieceOnSquare;
     }
 
-    public squareIndex getIndex() {
+    public SquareIndex getIndex() {
         return index;
     }
 
-    public void setIndex(squareIndex index) {
+    public void setIndex(SquareIndex index) {
         this.index = index;
     }
 

@@ -1,11 +1,11 @@
 package com.Game.Chess.Model.board;
 
-public class squareIndex {
+public class SquareIndex {
 
     int file;
     int rank;
 
-    squareIndex(int file, int rank) {
+    SquareIndex(int file, int rank) {
 
         this.file = file;
         this.rank = rank;
@@ -45,7 +45,7 @@ public class squareIndex {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        squareIndex other = (squareIndex) obj;
+        SquareIndex other = (SquareIndex) obj;
         if (file != other.file)
             return false;
         if (rank != other.rank)

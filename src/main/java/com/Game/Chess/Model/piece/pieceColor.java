@@ -1,5 +1,5 @@
 package com.Game.Chess.Model.piece;
 
-public enum pieceColor {
+public enum PieceColor {
     WHITE,BLACK
 }

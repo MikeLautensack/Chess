@@ -1,9 +1,9 @@
-package com.Game.Chess.Model.game;
+package com.Game.Chess.Model.piece;
 
 import java.util.List;
 import com.Game.Chess.Model.board.Square;
 
-public interface getLegalMoves {
+public interface GetLegalMoves {
     
     public List<Square> getMoves(Square[][] boardArray, Square newSquare);
 

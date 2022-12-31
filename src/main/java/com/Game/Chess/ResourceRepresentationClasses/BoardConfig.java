@@ -1,6 +1,6 @@
 package com.Game.Chess.ResourceRepresentationClasses;
 
-public class currentBoardConfig {
+public class BoardConfig {
     
 String a1;    
 String b1;
@@ -67,7 +67,7 @@ String f8;
 String g8;
 String h8;
 
-public currentBoardConfig() {
+public BoardConfig() {
 
 }
 

@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Game.Chess.ResourceRepresentationClasses.currentBoardConfig;
-import com.Game.Chess.ResourceRepresentationClasses.legalMoves;
+import com.Game.Chess.ResourceRepresentationClasses.BoardConfig;
+import com.Game.Chess.ResourceRepresentationClasses.LegalMoves;
 
 @RestController
 public class GameController {
@@ -15,10 +15,10 @@ public class GameController {
     
 
     @PostMapping(path="/boardConfig")
-    public ResponseEntity<legalMoves> boardConfig(@RequestBody currentBoardConfig boardConfig) {
+    public ResponseEntity<LegalMoves> boardConfig(@RequestBody BoardConfig boardConfig) {
         System.out.println(boardConfig); 
         return new ResponseEntity<>(
-            new legalMoves(
+            new LegalMoves(
                 null,
                 null,
                 null,

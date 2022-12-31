@@ -1,6 +1,6 @@
 package com.Game.Chess.ResourceRepresentationClasses;
 
-public class legalMoves {
+public class LegalMoves {
     
     String[] whiteKing;    
     String[] whiteQueen;
@@ -35,7 +35,7 @@ public class legalMoves {
     String[] blackGPawn;
     String[] blackHPawn;
 
-    public legalMoves(String[] whiteKing, String[] whiteQueen, String[] whiteKsRook, String[] whiteQsRook,
+    public LegalMoves(String[] whiteKing, String[] whiteQueen, String[] whiteKsRook, String[] whiteQsRook,
             String[] whiteLsBishop, String[] whiteDsBishop, String[] whiteKsKnight, String[] whiteQsKnight,
             String[] whiteAPawn, String[] whiteBPawn, String[] whiteCPawn, String[] whiteDPawn, String[] whiteEPawn,
             String[] whiteFPawn, String[] whiteGPawn, String[] whiteHPawn, String[] blackKing, String[] blackQueen,

@@ -2,15 +2,14 @@ package com.Game.Chess.Model.piece;
 
 import java.util.ArrayList;
 
-import com.Game.Chess.Model.game.getLegalMoves;
 import com.Game.Chess.Model.board.Square;
-import com.Game.Chess.Model.board.squareIndex;
+import com.Game.Chess.Model.board.SquareIndex;
 
-public class Pawn extends Piece implements getLegalMoves{
+public class Pawn extends Piece implements GetLegalMoves{
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
-    Pawn(pieceColor color, int material, Square currentSquare) {
+    Pawn(PieceColor color, int material, Square currentSquare) {
         super(color, material, currentSquare);
         
         this.material = 1;
@@ -26,13 +25,13 @@ public class Pawn extends Piece implements getLegalMoves{
         Square testingSquare;
         int testingSquareIndexFile;
         int testingSquareIndexRank;
-        squareIndex squareIndex;
-        squareIndex testingSquareIndex;
+        SquareIndex squareIndex;
+        SquareIndex testingSquareIndex;
         int squareIndexFile;
         int squareIndexRank;
         boolean occupied;
-        pieceColor testSquarePieceColor;
-        pieceColor pieceColor;
+        PieceColor testSquarePieceColor;
+        PieceColor pieceColor;
         
         
 
