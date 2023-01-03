@@ -3,13 +3,14 @@ package com.Game.Chess.Model.board;
 public class Coordinates {
 
     String file;
-    Integer rank;
+    String rank;
+    String coordinate;
 
-    Coordinates(String file, Integer rank) {
+    Coordinates(String file, String rank, String coordinate) {
 
-            this.file = file;
-            this.rank = rank;
-        
+        this.file = file;
+        this.rank = rank;
+        this.coordinate = coordinate;
 
     }
 
@@ -17,15 +18,29 @@ public class Coordinates {
         return file;
     }
 
-    public Integer getRank() {
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    public String getRank() {
         return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+    public String getCoordinate() {
+        return coordinate;
+    }
+
+    public void setCoordinate(String coordinate) {
+        this.coordinate = coordinate;
     }
 
     @Override
     public String toString() {
-        return "Coordinates [file=" + file + ", rank=" + rank + "]";
+        return "Coordinates [file=" + file + ", rank=" + rank + ", coordinate=" + coordinate + "]";
     }
 
-    }
-    
-
+}
