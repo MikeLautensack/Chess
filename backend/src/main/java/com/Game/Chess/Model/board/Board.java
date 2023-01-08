@@ -38,13 +38,15 @@ public class Board {
 
                 // Get value of the instance variable of the boardConfig passed in that matches
                 // square coordinate
-                Field[] boardConfigFields = boardConfig.getClass().getDeclaredFields();
-                for (Field field : boardConfigFields) {
-                    Field f = boardConfig.getClass().getDeclaredField(field);
-                    if (field.getName().equals(coordinate)) {
-                        String boardConfigPieceValue = field.get(field);
-                    }
-                }
+                /*
+                 * Field[] boardConfigFields = boardConfig.getClass().getDeclaredFields();
+                 * for (Field field : boardConfigFields) {
+                 * Field f = boardConfig.getClass().getDeclaredField(field);
+                 * if (field.getName().equals(coordinate)) {
+                 * String boardConfigPieceValue = field.get(field);
+                 * }
+                 * }
+                 */
 
                 // Build piece object that represents the value you got from the previus step
 
