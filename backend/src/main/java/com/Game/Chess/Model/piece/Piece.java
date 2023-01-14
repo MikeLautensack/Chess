@@ -5,15 +5,11 @@ import com.Game.Chess.Model.board.Square;
 public abstract class Piece {
 
     PieceColor color;
-    int material;
-    Square currentSquare;
 
-    Piece(PieceColor color, int material, Square currentSqaure) {
+    Piece(PieceColor color) {
 
         this.color = color;
-        this.material = material;
-        this.currentSquare = currentSqaure;
-        
+
     }
 
     public PieceColor getColor() {
@@ -24,12 +20,12 @@ public abstract class Piece {
         this.color = color;
     }
 
-    public Square getCurrentSquare() {
-        return currentSquare;
+    public String getType() {
+        return type;
     }
 
-    public void setCurrentSquare(Square currentSquare) {
-        this.currentSquare = currentSquare;
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
@@ -37,5 +33,4 @@ public abstract class Piece {
         return "Piece [color=" + color + ", material=" + material + ", currentSquare=" + currentSquare + "]";
     }
 
-    
 }
