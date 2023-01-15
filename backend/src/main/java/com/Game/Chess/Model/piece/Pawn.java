@@ -10,8 +10,8 @@ public class Pawn extends Piece implements GetLegalMoves {
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
-    Pawn(PieceColor color) {
-        super(color);
+    Pawn(PieceColor color, String id) {
+        super(color, id);
 
     }
 

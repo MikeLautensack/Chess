@@ -10,8 +10,8 @@ public class Knight extends Piece implements GetLegalMoves {
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
-    public Knight(PieceColor color) {
-        super(color);
+    public Knight(PieceColor color, String id) {
+        super(color, id);
     }
 
     @Override

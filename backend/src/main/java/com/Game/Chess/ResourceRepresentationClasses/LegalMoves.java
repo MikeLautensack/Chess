@@ -1,8 +1,10 @@
 package com.Game.Chess.ResourceRepresentationClasses;
 
+import java.util.HashMap;
+
 public class LegalMoves {
-    
-    String[] whiteKing;    
+
+    String[] whiteKing;
     String[] whiteQueen;
     String[] whiteKsRook;
     String[] whiteQsRook;
@@ -76,6 +78,193 @@ public class LegalMoves {
         this.blackFPawn = blackFPawn;
         this.blackGPawn = blackGPawn;
         this.blackHPawn = blackHPawn;
+    }
+
+    public static LegalMoves createLegalMoves(HashMap<K, V> map) {
+
+        LegalMoves legalMoves;
+        HashMap<String, String> hashmap = map;
+
+        String whiteKing;
+        String whiteQueen;
+        String whiteKsRook;
+        String whiteQsRook;
+        String whiteLsBishop;
+        String whiteDsBishop;
+        String whiteKsKnight;
+        String whiteQsKnight;
+        String whiteAPawn;
+        String whiteBPawn;
+        String whiteCPawn;
+        String whiteDPawn;
+        String whiteEPawn;
+        String whiteFPawn;
+        String whiteGPawn;
+        String whiteHPawn;
+        String blackKing;
+        String blackQueen;
+        String blackKsRook;
+        String blackQsRook;
+        String blackLsBishop;
+        String blackDsBishop;
+        String blackKsKnight;
+        String blackQsKnight;
+        String blackAPawn;
+        String blackBPawn;
+        String blackCPawn;
+        String blackDPawn;
+        String blackEPawn;
+        String blackFPawn;
+        String blackGPawn;
+        String blackHPawn;
+
+        String[] pieces = {
+                whiteKing,
+                whiteQueen,
+                whiteKsRook,
+                whiteQsRook,
+                whiteLsBishop,
+                whiteDsBishop,
+                whiteKsKnight,
+                whiteQsKnight,
+                whiteAPawn,
+                whiteBPawn,
+                whiteCPawn,
+                whiteDPawn,
+                whiteEPawn,
+                whiteFPawn,
+                whiteGPawn,
+                whiteHPawn,
+                blackKing,
+                blackQueen,
+                blackKsRook,
+                blackQsRook,
+                blackLsBishop,
+                blackDsBishop,
+                blackKsKnight,
+                blackQsKnight,
+                blackAPawn,
+                blackBPawn,
+                blackCPawn,
+                blackDPawn,
+                blackEPawn,
+                blackFPawn,
+                blackGPawn,
+                blackHPawn
+        };
+
+        String[] whiteKingArr;
+        String[] whiteQueenArr;
+        String[] whiteKsRookArr;
+        String[] whiteQsRookArr;
+        String[] whiteLsBishopArr;
+        String[] whiteDsBishopArr;
+        String[] whiteKsKnightArr;
+        String[] whiteQsKnightArr;
+        String[] whiteAPawnArr;
+        String[] whiteBPawnArr;
+        String[] whiteCPawnArr;
+        String[] whiteDPawnArr;
+        String[] whiteEPawnArr;
+        String[] whiteFPawnArr;
+        String[] whiteGPawnArr;
+        String[] whiteHPawnArr;
+        String[] blackKingArr;
+        String[] blackQueenArr;
+        String[] blackKsRookArr;
+        String[] blackQsRookArr;
+        String[] blackLsBishopArr;
+        String[] blackDsBishopArr;
+        String[] blackKsKnightArr;
+        String[] blackQsKnightArr;
+        String[] blackAPawnArr;
+        String[] blackBPawnArr;
+        String[] blackCPawnArr;
+        String[] blackDPawnArr;
+        String[] blackEPawnArr;
+        String[] blackFPawnArr;
+        String[] blackGPawnArr;
+        String[] blackHPawnArr;
+
+        String[] piecesArr = {
+                whiteKingArr,
+                whiteQueenArr,
+                whiteKsRookArr,
+                whiteQsRookArr,
+                whiteLsBishopArr,
+                whiteDsBishopArr,
+                whiteKsKnightArr,
+                whiteQsKnightArr,
+                whiteAPawnArr,
+                whiteBPawnArr,
+                whiteCPawnArr,
+                whiteDPawnArr,
+                whiteEPawnArr,
+                whiteFPawnArr,
+                whiteGPawnArr,
+                whiteHPawnArr,
+                blackKingArr,
+                blackQueenArr,
+                blackKsRookArr,
+                blackQsRookArr,
+                blackLsBishopArr,
+                blackDsBishopArr,
+                blackKsKnightArr,
+                blackQsKnightArr,
+                blackAPawnArr,
+                blackBPawnArr,
+                blackCPawnArr,
+                blackDPawnArr,
+                blackEPawnArr,
+                blackFPawnArr,
+                blackGPawnArr,
+                blackHPawnArr
+        };
+
+        for (int i = 0; i < pieces.length; i++) {
+            String string = pieces[i];
+            String[] stringArr;
+            hashmap.forEach((k, v) -> {
+                if (k == string) {
+                    stringArr = v;
+                }
+            });
+            piecesArr[i] = stringArr;
+            legalMoves = new LegalMoves(whiteKingArr,
+                    whiteQueenArr,
+                    whiteKsRookArr,
+                    whiteQsRookArr,
+                    whiteLsBishopArr,
+                    whiteDsBishopArr,
+                    whiteKsKnightArr,
+                    whiteQsKnightArr,
+                    whiteAPawnArr,
+                    whiteBPawnArr,
+                    whiteCPawnArr,
+                    whiteDPawnArr,
+                    whiteEPawnArr,
+                    whiteFPawnArr,
+                    whiteGPawnArr,
+                    whiteHPawnArr,
+                    blackKingArr,
+                    blackQueenArr,
+                    blackKsRookArr,
+                    blackQsRookArr,
+                    blackLsBishopArr,
+                    blackDsBishopArr,
+                    blackKsKnightArr,
+                    blackQsKnightArr,
+                    blackAPawnArr,
+                    blackBPawnArr,
+                    blackCPawnArr,
+                    blackDPawnArr,
+                    blackEPawnArr,
+                    blackFPawnArr,
+                    blackGPawnArr,
+                    blackHPawnArr);
+        }
+
+        return legalMoves;
     }
 
     public String[] getWhiteKing() {
@@ -334,6 +523,4 @@ public class LegalMoves {
         this.blackHPawn = blackHPawn;
     }
 
-    
-
-} 
+}

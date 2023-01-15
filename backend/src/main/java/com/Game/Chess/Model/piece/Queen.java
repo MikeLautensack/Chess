@@ -10,8 +10,8 @@ public class Queen extends Piece implements GetLegalMoves {
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
-    public Queen(PieceColor color) {
-        super(color);
+    public Queen(PieceColor color, String id) {
+        super(color, id);
     }
 
     @Override

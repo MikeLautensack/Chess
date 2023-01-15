@@ -10,8 +10,8 @@ public class Rook extends Piece implements GetLegalMoves {
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
-    public Rook(PieceColor color) {
-        super(color);
+    public Rook(PieceColor color, String id) {
+        super(color, id);
     }
 
     @Override

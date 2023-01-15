@@ -10,8 +10,8 @@ public class Bishop extends Piece implements GetLegalMoves {
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
-    public Bishop(PieceColor color) {
-        super(color);
+    public Bishop(PieceColor color, String id) {
+        super(color, id);
     }
 
     @Override

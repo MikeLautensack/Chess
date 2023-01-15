@@ -5,11 +5,12 @@ import com.Game.Chess.Model.board.Square;
 public abstract class Piece {
 
     PieceColor color;
+    String id;
 
-    Piece(PieceColor color) {
+    Piece(PieceColor color, String id) {
 
         this.color = color;
-
+        this.id = id;
     }
 
     public PieceColor getColor() {
@@ -20,12 +21,12 @@ public abstract class Piece {
         this.color = color;
     }
 
-    public String getType() {
-        return type;
+    public String getId() {
+        return id;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override

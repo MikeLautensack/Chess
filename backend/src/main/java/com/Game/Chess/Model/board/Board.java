@@ -42,50 +42,50 @@ public class Board {
                     if (coordinate == k) {
                         if (v.contains("King")) {
                             if (v.contains("white")) {
-                                King piece = new King(PieceColor.WHITE);
+                                King piece = new King(PieceColor.WHITE, v);
                                 newSquare.setPieceOnSquare(piece);
                             } else if (v.contains("black")) {
-                                King piece = new King(PieceColor.BLACK);
+                                King piece = new King(PieceColor.BLACK, v);
                                 newSquare.setPieceOnSquare(piece);
                             }
                         } else if (v.contains("Queen")) {
                             if (v.contains("white")) {
-                                Queen piece = new Queen(PieceColor.WHITE);
+                                Queen piece = new Queen(PieceColor.WHITE, v);
                                 newSquare.setPieceOnSquare(piece);
                             } else if (v.contains("black")) {
-                                Queen piece = new Queen(PieceColor.BLACK);
+                                Queen piece = new Queen(PieceColor.BLACK, v);
                                 newSquare.setPieceOnSquare(piece);
                             }
                         } else if (v.contains("Rook")) {
                             if (v.contains("white")) {
-                                Rook piece = new Rook(PieceColor.WHITE);
+                                Rook piece = new Rook(PieceColor.WHITE, v);
                                 newSquare.setPieceOnSquare(piece);
                             } else if (v.contains("black")) {
-                                Rook piece = new Rook(PieceColor.BLACK);
+                                Rook piece = new Rook(PieceColor.BLACK, v);
                                 newSquare.setPieceOnSquare(piece);
                             }
                         } else if (v.contains("Bishop")) {
                             if (v.contains("white")) {
-                                Bishop piece = new Bishop(PieceColor.WHITE);
+                                Bishop piece = new Bishop(PieceColor.WHITE, v);
                                 newSquare.setPieceOnSquare(piece);
                             } else if (v.contains("black")) {
-                                Bishop piece = new Bishop(PieceColor.BLACK);
+                                Bishop piece = new Bishop(PieceColor.BLACK, v);
                                 newSquare.setPieceOnSquare(piece);
                             }
                         } else if (v.contains("Knight")) {
                             if (v.contains("white")) {
-                                Knight piece = new Knight(PieceColor.WHITE);
+                                Knight piece = new Knight(PieceColor.WHITE, v);
                                 newSquare.setPieceOnSquare(piece);
                             } else if (v.contains("black")) {
-                                Knight piece = new Knight(PieceColor.BLACK);
+                                Knight piece = new Knight(PieceColor.BLACK, v);
                                 newSquare.setPieceOnSquare(piece);
                             }
                         } else if (v.contains("Pawn")) {
                             if (v.contains("white")) {
-                                Pawn piece = new Pawn(PieceColor.WHITE);
+                                Pawn piece = new Pawn(PieceColor.WHITE, v);
                                 newSquare.setPieceOnSquare(piece);
                             } else if (v.contains("black")) {
-                                Pawn piece = new Pawn(PieceColor.BLACK);
+                                Pawn piece = new Pawn(PieceColor.BLACK, v);
                                 newSquare.setPieceOnSquare(piece);
                             }
                         }

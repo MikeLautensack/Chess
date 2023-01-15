@@ -10,8 +10,8 @@ public class King extends Piece implements GetLegalMoves {
 
     private ArrayList<Square> candidateMoves = new ArrayList<>();
 
-    public King(PieceColor color) {
-        super(color);
+    public King(PieceColor color, String id) {
+        super(color, id);
     }
 
     @Override
