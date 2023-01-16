@@ -1,5 +1,6 @@
 package com.Game.Chess.Model.game;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.Game.Chess.Model.board.Board;
@@ -16,24 +17,58 @@ public class GenerateLegalMoves {
         Board board = new Board(boardConfig);
 
         // Access board's boardArray
-        Square[][] boardArr = board.boardArray;
+        Square[][] boardArr = board.getBoardArray();
 
         // Create new LegalMoves object
         LegalMoves legalMoves;
 
         // Loop through boardArray and access square and piece on square
         for (int i = 0; i < boardArr.length; i++) {
+
+            Piece piece;
+            String[] pieceMoves;
+            ArrayList<String[]> legalMovesArr = new ArrayList<>();
+
             for (Square square : boardArr[i]) {
-                Piece piece;
-                String pieceID;
-                ArrayList pieceMoves;
-                HashMap<String, String[]> legalMovesMap;
 
                 piece = square.getPieceOnSquare();
                 pieceMoves = piece.getMoves(board);
-                pieceID = piece.getId();
-                legalMovesMap.put(pieceID, pieceMoves);
-                legalMoves = createLegalMoves(legalMovesMap);
+                legalMovesArr.add(pieceMoves);
+
+                legalMoves = new LegalMoves.LegalMovesBuilder()
+                        .WhiteKing(null)
+                        .WhiteQueen(null)
+                        .WhiteKsRook(null)
+                        .WhiteQsRook(null)
+                        .WhiteLsBishop(null)
+                        .WhiteDsBishop(null)
+                        .WhiteKsKnight(null)
+                        .WhiteQsKnight(null)
+                        .WhiteAPawn(null)
+                        .WhiteBPawn(null)
+                        .WhiteCPawn(null)
+                        .WhiteDPawn(null)
+                        .WhiteEPawn(null)
+                        .WhiteFPawn(null)
+                        .WhiteGPawn(null)
+                        .WhiteHPawn(null)
+                        .BlackKing(null)
+                        .BlackQueen(null)
+                        .BlackKsRook(null)
+                        .BlackQsRook(null)
+                        .BlackLsBishop(null)
+                        .BlackDsBishop(null)
+                        .BlackKsKnight(null)
+                        .BlackQsKnight(null)
+                        .BlackAPawn(null)
+                        .BlackBPawn(null)
+                        .BlackCPawn(null)
+                        .BlackDPawn(null)
+                        .BlackEPawn(null)
+                        .BlackFPawn(null)
+                        .BlackGPawn(null)
+                        .BlackHPawn(null)
+                        .build();
             }
         }
 

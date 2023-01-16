@@ -4,8 +4,8 @@ import com.Game.Chess.Model.board.Square;
 
 public abstract class Piece {
 
-    PieceColor color;
-    String id;
+    private PieceColor color;
+    private String id;
 
     Piece(PieceColor color, String id) {
 

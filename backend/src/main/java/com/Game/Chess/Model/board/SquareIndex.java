@@ -2,8 +2,8 @@ package com.Game.Chess.Model.board;
 
 public class SquareIndex {
 
-    int file;
-    int rank;
+    private int file;
+    private int rank;
 
     SquareIndex(int file, int rank) {
 
@@ -52,5 +52,5 @@ public class SquareIndex {
             return false;
         return true;
     }
-    
+
 }

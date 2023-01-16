@@ -11,10 +11,10 @@ import com.Game.Chess.ResourceRepresentationClasses.BoardConfig;
 
 public class Board {
 
-    public Square[][] boardArray = new Square[8][8];
-    HashMap<Coordinates, Square> squareCoordinatesMap = new HashMap<>();
-    HashMap<Square, Square> squareIndexMap = new HashMap<>();
-    String[] fileArray = { "a", "b", "c", "d", "e", "f", "g", "h" };
+    private Square[][] boardArray = new Square[8][8];
+    private HashMap<Coordinates, Square> squareCoordinatesMap = new HashMap<>();
+    private HashMap<Square, Square> squareIndexMap = new HashMap<>();
+    private String[] fileArray = { "a", "b", "c", "d", "e", "f", "g", "h" };
 
     public Board(BoardConfig boardConfig) {
 
@@ -113,6 +113,38 @@ public class Board {
             }
             System.out.println();
         }
+    }
+
+    public Square[][] getBoardArray() {
+        return boardArray;
+    }
+
+    public void setBoardArray(Square[][] boardArray) {
+        this.boardArray = boardArray;
+    }
+
+    public HashMap<Coordinates, Square> getSquareCoordinatesMap() {
+        return squareCoordinatesMap;
+    }
+
+    public void setSquareCoordinatesMap(HashMap<Coordinates, Square> squareCoordinatesMap) {
+        this.squareCoordinatesMap = squareCoordinatesMap;
+    }
+
+    public HashMap<Square, Square> getSquareIndexMap() {
+        return squareIndexMap;
+    }
+
+    public void setSquareIndexMap(HashMap<Square, Square> squareIndexMap) {
+        this.squareIndexMap = squareIndexMap;
+    }
+
+    public String[] getFileArray() {
+        return fileArray;
+    }
+
+    public void setFileArray(String[] fileArray) {
+        this.fileArray = fileArray;
     }
 
 }

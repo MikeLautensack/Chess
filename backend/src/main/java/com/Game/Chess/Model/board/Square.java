@@ -4,12 +4,11 @@ import com.Game.Chess.Model.piece.Piece;
 
 public class Square {
 
-    boolean occupied;
-    SquareColor color;
-    Coordinates squareCoordinate;
-    Piece pieceOnSquare;
-    SquareIndex index;
-
+    private boolean occupied;
+    private SquareColor color;
+    private Coordinates squareCoordinate;
+    private Piece pieceOnSquare;
+    private SquareIndex index;
 
     Square(boolean occupied, SquareColor color, Coordinates squareCoordinate, Piece pieceOnSquare, SquareIndex index) {
 
@@ -108,5 +107,5 @@ public class Square {
             return false;
         return true;
     }
-    
+
 }

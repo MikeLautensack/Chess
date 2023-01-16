@@ -8,14 +8,14 @@ import com.Game.Chess.Model.board.SquareIndex;
 
 public class Queen extends Piece implements GetLegalMoves {
 
-    private ArrayList<Square> candidateMoves = new ArrayList<>();
+    private String[] candidateMoves = new ArrayList<>();
 
     public Queen(PieceColor color, String id) {
         super(color, id);
     }
 
     @Override
-    public ArrayList<Square> getMoves(Board board) {
+    public String[] getMoves(Board board) {
 
     }
 

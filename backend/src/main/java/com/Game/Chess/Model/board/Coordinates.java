@@ -2,9 +2,9 @@ package com.Game.Chess.Model.board;
 
 public class Coordinates {
 
-    String file;
-    String rank;
-    String coordinate;
+    private String file;
+    private String rank;
+    private String coordinate;
 
     Coordinates(String file, String rank, String coordinate) {
 
