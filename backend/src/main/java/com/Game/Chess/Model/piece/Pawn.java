@@ -8,7 +8,7 @@ import com.Game.Chess.Model.board.SquareIndex;
 
 public class Pawn extends Piece implements GetLegalMoves {
 
-    private String[] candidateMoves = new ArrayList<>();
+    private List<Square> candidateMoves = new ArrayList<>();
 
     Pawn(PieceColor color, String id) {
         super(color, id);
@@ -16,7 +16,7 @@ public class Pawn extends Piece implements GetLegalMoves {
     }
 
     @Override
-    public String[] getMoves(Board board) {
+    public List<Square> getMoves(Board board) {
 
     }
 

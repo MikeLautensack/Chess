@@ -1,6 +1,9 @@
 package com.Game.Chess.ResourceRepresentationClasses;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+
+import com.Game.Chess.Model.piece.Piece;
 
 public class LegalMoves {
 
@@ -39,6 +42,86 @@ public class LegalMoves {
 
     private LegalMoves(LegalMovesBuilder builder) {
 
+    }
+
+    public static List<Piece> orderPieces(List arr) {
+        Piece piece;
+        String pieceID;
+        List<Piece> orderedPieces = new ArrayList<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            piece = arr.get(i);
+            pieceID = piece.getId();
+
+            if (pieceID == "whiteKing") {
+
+            } else if (pieceID == "whiteKing") {
+                orderedPieces.add(0, piece);
+            } else if (pieceID == "whiteQueen") {
+                orderedPieces.add(1, piece);
+            } else if (pieceID == "whiteKsRook") {
+                orderedPieces.add(2, piece);
+            } else if (pieceID == "whiteQsRook") {
+                orderedPieces.add(3, piece);
+            } else if (pieceID == "whiteLsBishop") {
+                orderedPieces.add(4, piece);
+            } else if (pieceID == "whiteDsBishop") {
+                orderedPieces.add(5, piece);
+            } else if (pieceID == "whiteKsKnight") {
+                orderedPieces.add(6, piece);
+            } else if (pieceID == "whiteQsKnight") {
+                orderedPieces.add(7, piece);
+            } else if (pieceID == "whiteAPawn") {
+                orderedPieces.add(8, piece);
+            } else if (pieceID == "whiteBPawn") {
+                orderedPieces.add(9, piece);
+            } else if (pieceID == "whiteCPawn") {
+                orderedPieces.add(10, piece);
+            } else if (pieceID == "whiteDPawn") {
+                orderedPieces.add(11, piece);
+            } else if (pieceID == "whiteEPawn") {
+                orderedPieces.add(12, piece);
+            } else if (pieceID == "whiteFPawn") {
+                orderedPieces.add(13, piece);
+            } else if (pieceID == "whiteGPawn") {
+                orderedPieces.add(14, piece);
+            } else if (pieceID == "whiteHPawn") {
+                orderedPieces.add(15, piece);
+            } else if (pieceID == "blackKing") {
+                orderedPieces.add(16, piece);
+            } else if (pieceID == "blackQueen") {
+                orderedPieces.add(17, piece);
+            } else if (pieceID == "blackKsRook") {
+                orderedPieces.add(18, piece);
+            } else if (pieceID == "blackQsRook") {
+                orderedPieces.add(19, piece);
+            } else if (pieceID == "blackLsBishop") {
+                orderedPieces.add(20, piece);
+            } else if (pieceID == "whiteDsBishop") {
+                orderedPieces.add(21, piece);
+            } else if (pieceID == "whiteKsKnight") {
+                orderedPieces.add(22, piece);
+            } else if (pieceID == "whiteQsKnight") {
+                orderedPieces.add(23, piece);
+            } else if (pieceID == "blackAPawn") {
+                orderedPieces.add(24, piece);
+            } else if (pieceID == "blackBPawn") {
+                orderedPieces.add(25, piece);
+            } else if (pieceID == "blackCPawn") {
+                orderedPieces.add(26, piece);
+            } else if (pieceID == "blackDPawn") {
+                orderedPieces.add(27, piece);
+            } else if (pieceID == "blackEPawn") {
+                orderedPieces.add(28, piece);
+            } else if (pieceID == "blackFPawn") {
+                orderedPieces.add(29, piece);
+            } else if (pieceID == "blackGPawn") {
+                orderedPieces.add(30, piece);
+            } else if (pieceID == "blackHPawn") {
+                orderedPieces.add(31, piece);
+            }
+        }
+        return orderedPieces;
     }
 
     public String[] getWhiteKing() {

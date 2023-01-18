@@ -1,0 +1,9 @@
+.light {
+    background-image: url(assets/light-square.jpg);
+    background-size: cover;
+}
+
+.dark {
+    background-image: url(assets/dark-square.jpg);
+    background-size: cover;
+}
