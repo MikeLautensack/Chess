@@ -1,8 +1,10 @@
 package com.Game.Chess.Model.game;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.Game.Chess.Model.board.Board;
 import com.Game.Chess.Model.board.Square;
@@ -31,66 +33,90 @@ public class GenerateLegalMoves {
             }
         }
 
-        // Reorder pieces in pieces<> into orderedPieces<>
-        List<Piece> orderedPieces = new ArrayList<>();
-        orderedPieces = orderPieces(pieces);
+        // Sort pieces
+        Collections.sort(pieces);
 
-        // Loop through orderedPieces and run getMoves() on each piece
-        // then add the list returned from getMoves() to the legalSquaresList
-        List<List<Square>> legalSquaresList = new ArrayList();
-        for (int i = 0; i < orderedPieces.length; i++) {
-            Piece piece = orderedPieces.get(i);
+        // Loop through pieces and run getMoves() on each piece
+        // then add the list returned from getMoves() to a map with piece id as its key
+        Map<String, List<String>> map = new HashMap<>();
+        for (int i = 0; i < pieces.length; i++) {
+            Piece piece = pieces.get(i);
             List<Square> pieceMoves = piece.getMoves(board);
-            legalSquaresList.add(pieceMoves);
-        }
-
-        // Build List<List<String>> from List<List<Square>>
-        List<List<String>> legalStringList = new ArrayList<>();
-        for (int i = 0; i < legalSquaresList.length; i++) {
-            List<Square> squareList = legalSquaresList.get(i);
-            List<String> stringList = new ArrayList<>();
-            for (int j = 0; j < legalSquaresList.get(i).length; j++) {
-                Square listSquare = squareList.get(j);
-                String listSquareID = listSquare.getSquareCoordinate().getCoordinate();
-                stringList.add(listSquareID);
+            List<String> stringMoves = new ArrayList<>();
+            for (int j = 0; j < pieceMoves.length; j++) {
+                Square square = pieceMoves.get(j);
+                String squareID = square.getSquareCoordinate().getCoordinate();
+                stringMoves.add(squareID);
             }
-            legalStringList.add(stringList);
+            map.put(piece.getId(), stringMoves);
         }
 
         // Build LegalMoves object
         LegalMoves legalMoves = new LegalMoves.LegalMovesBuilder()
-                .WhiteKing(legalStringList.get(0))
-                .WhiteQueen(legalStringList.get(1))
-                .WhiteKsRook(legalStringList.get(2))
-                .WhiteQsRook(legalStringList.get(3))
-                .WhiteLsBishop(legalStringList.get(4))
-                .WhiteDsBishop(legalStringList.get(5))
-                .WhiteKsKnight(legalStringList.get(6))
-                .WhiteQsKnight(legalStringList.get(7))
-                .WhiteAPawn(legalStringList.get(8))
-                .WhiteBPawn(legalStringList.get(9))
-                .WhiteCPawn(legalStringList.get(10))
-                .WhiteDPawn(legalStringList.get(11))
-                .WhiteEPawn(legalStringList.get(12))
-                .WhiteFPawn(legalStringList.get(13))
-                .WhiteGPawn(legalStringList.get(14))
-                .WhiteHPawn(legalStringList.get(15))
-                .BlackKing(legalStringList.get(16))
-                .BlackQueen(legalStringList.get(17))
-                .BlackKsRook(legalStringList.get(18))
-                .BlackQsRook(legalStringList.get(19))
-                .BlackLsBishop(legalStringList.get(20))
-                .BlackDsBishop(legalStringList.get(21))
-                .BlackKsKnight(legalStringList.get(22))
-                .BlackQsKnight(legalStringList.get(23))
-                .BlackAPawn(legalStringList.get(24))
-                .BlackBPawn(legalStringList.get(25))
-                .BlackCPawn(legalStringList.get(26))
-                .BlackDPawn(legalStringList.get(27))
-                .BlackEPawn(legalStringList.get(28))
-                .BlackFPawn(legalStringList.get(29))
-                .BlackGPawn(legalStringList.get(30))
-                .BlackHPawn(legalStringList.get(31))
+                .BlackAPawn(map.get("blackAPawn"))
+                .BlackARook(map.get("blackARook"))
+                .BlackBKnight(map.get("blackBKnight"))
+                .BlackBPawn(map.get("blackBPawn"))
+                .BlackCBishop(map.get("blackCBishop"))
+                .BlackCPawn(map.get("blackCPawn"))
+                .BlackDPawn(map.get("blackDPawn"))
+                .BlackEPawn(map.get("blackEPawn"))
+                .BlackFBishop(map.get("blackFBishop"))
+                .BlackFPawn(map.get("blackFPawn"))
+                .BlackGKnight(map.get("blackGKnight"))
+                .BlackGPawn(map.get("blackGPawn"))
+                .BlackHPawn(map.get("blackHPawn"))
+                .BlackHRook(map.get("blackHRook"))
+                .BlackKing(map.get("blackKing"))
+                .BlackQueen(map.get("blackQueen"))
+                .PromotionBishopA(map.get("promotionBishopA"))
+                .PromotionBishopB(map.get("promotionBishopB"))
+                .PromotionBishopC(map.get("promotionBishopC"))
+                .PromotionBishopD(map.get("promotionBishopD"))
+                .PromotionBishopE(map.get("promotionBishopE"))
+                .PromotionBishopF(map.get("promotionBishopF"))
+                .PromotionBishopG(map.get("promotionBishopG"))
+                .PromotionBishopH(map.get("promotionBishopH"))
+                .PromotionKnightA(map.get("promotionKnightA"))
+                .PromotionKnightB(map.get("promotionKnightB"))
+                .PromotionKnightC(map.get("promotionKnightC"))
+                .PromotionKnightD(map.get("promotionKnightD"))
+                .PromotionKnightE(map.get("promotionKnightE"))
+                .PromotionKnightF(map.get("promotionKnightF"))
+                .PromotionKnightG(map.get("promotionKnightG"))
+                .PromotionKnightH(map.get("promotionKnightH"))
+                .PromotionQueenA(map.get("promotionQueenA"))
+                .PromotionQueenB(map.get("promotionQueenB"))
+                .PromotionQueenC(map.get("promotionQueenC"))
+                .PromotionQueenD(map.get("promotionQueenD"))
+                .PromotionQueenE(map.get("promotionQueenE"))
+                .PromotionQueenF(map.get("promotionQueenF"))
+                .PromotionQueenG(map.get("promotionQueenG"))
+                .PromotionQueenH(map.get("promotionQueenH"))
+                .PromotionRookA(map.get("promotionRookA"))
+                .PromotionRookB(map.get("promotionRookB"))
+                .PromotionRookC(map.get("promotionRookC"))
+                .PromotionRookD(map.get("promotionRookD"))
+                .PromotionRookE(map.get("promotionRookE"))
+                .PromotionRookF(map.get("promotionRookF"))
+                .PromotionRookG(map.get("promotionRookG"))
+                .PromotionRookH(map.get("promotionRookH"))
+                .whiteAPawn(map.get("whiteAPawn"))
+                .whiteARook(map.get("whiteARook"))
+                .whiteBKnight(map.get("whiteBKnight"))
+                .whiteBPawn(map.get("whiteBPawn"))
+                .whiteCBishop(map.get("whiteCBishop"))
+                .whiteCPawn(map.get("whiteCPawn"))
+                .whiteDPawn(map.get("whiteDPawn"))
+                .whiteEPawn(map.get("whiteEPawn"))
+                .whiteFBishop(map.get("whiteFBishop"))
+                .whiteFPawn(map.get("whiteFPawn"))
+                .whiteGKnight(map.get("whiteGKnight"))
+                .whiteGPawn(map.get("whiteGPawn"))
+                .whiteHPawn(map.get("whiteHPawn"))
+                .whiteHRook(map.get("whiteHRook"))
+                .whiteKing(map.get("whiteKing"))
+                .whiteQueen(map.get("whiteQueen"))
                 .build();
 
         // Return LegalMoves object
