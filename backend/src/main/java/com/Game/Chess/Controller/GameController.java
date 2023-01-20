@@ -13,16 +13,15 @@ import com.Game.Chess.ResourceRepresentationClasses.LegalMoves;
 @RestController
 public class GameController {
 
-    
-
-    @PostMapping(path="/boardConfig")
+    @PostMapping(path = "/boardConfig")
     public ResponseEntity<LegalMoves> boardConfig(@RequestBody BoardConfig boardConfig) {
-        
+
         LegalMoves legalMoves;
         legalMoves = GenerateLegalMoves.generateLegalMoves(boardConfig);
 
         return new ResponseEntity<>(
-            legalMoves,
-            HttpStatus.OK);
+                legalMoves,
+                HttpStatus.OK);
     }
+
 }

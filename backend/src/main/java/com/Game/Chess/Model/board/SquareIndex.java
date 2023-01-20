@@ -5,7 +5,7 @@ public class SquareIndex {
     private int file;
     private int rank;
 
-    SquareIndex(int file, int rank) {
+    public SquareIndex(int file, int rank) {
 
         this.file = file;
         this.rank = rank;

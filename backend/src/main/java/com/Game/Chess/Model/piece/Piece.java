@@ -1,5 +1,8 @@
 package com.Game.Chess.Model.piece;
 
+import java.util.List;
+
+import com.Game.Chess.Model.board.Board;
 import com.Game.Chess.Model.board.Square;
 
 public abstract class Piece {
@@ -7,11 +10,13 @@ public abstract class Piece {
     private PieceColor color;
     private String id;
 
-    Piece(PieceColor color, String id) {
+    public Piece(PieceColor color, String id) {
 
         this.color = color;
         this.id = id;
     }
+
+    public abstract List<Square> getMoves(Board board);
 
     public PieceColor getColor() {
         return color;
@@ -31,7 +36,7 @@ public abstract class Piece {
 
     @Override
     public String toString() {
-        return "Piece [color=" + color + ", material=" + material + ", currentSquare=" + currentSquare + "]";
+        return "Piece [color=" + color + ", id=" + id + "]";
     }
 
 }

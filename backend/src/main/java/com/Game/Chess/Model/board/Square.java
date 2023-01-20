@@ -10,7 +10,8 @@ public class Square {
     private Piece pieceOnSquare;
     private SquareIndex index;
 
-    Square(boolean occupied, SquareColor color, Coordinates squareCoordinate, Piece pieceOnSquare, SquareIndex index) {
+    public Square(boolean occupied, SquareColor color, Coordinates squareCoordinate, Piece pieceOnSquare,
+            SquareIndex index) {
 
         this.occupied = occupied;
         this.color = color;

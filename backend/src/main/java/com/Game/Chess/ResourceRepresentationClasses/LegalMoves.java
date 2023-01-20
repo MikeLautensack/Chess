@@ -1,10 +1,5 @@
 package com.Game.Chess.ResourceRepresentationClasses;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import com.Game.Chess.Model.piece.Piece;
-
 public class LegalMoves {
 
     private String[] blackAPawn;
@@ -399,322 +394,322 @@ public class LegalMoves {
         String[] whiteKing;
         String[] whiteQueen;
 
-        public LegalMoves BlackAPawn(String[] blackAPawn) {
+        public LegalMovesBuilder BlackAPawn(String[] blackAPawn) {
             this.blackAPawn = blackAPawn;
             return this;
         }
 
-        public LegalMoves BlackARook(String[] blackARook) {
+        public LegalMovesBuilder BlackARook(String[] blackARook) {
             this.blackARook = blackARook;
             return this;
         }
 
-        public LegalMoves BlackBKnight(String[] blackBKnight) {
+        public LegalMovesBuilder BlackBKnight(String[] blackBKnight) {
             this.blackBKnight = blackBKnight;
             return this;
         }
 
-        public LegalMoves BlackBPawn(String[] blackBPawn) {
+        public LegalMovesBuilder BlackBPawn(String[] blackBPawn) {
             this.blackBPawn = blackBPawn;
             return this;
         }
 
-        public LegalMoves BlackCBishop(String[] blackCBishop) {
+        public LegalMovesBuilder BlackCBishop(String[] blackCBishop) {
             this.blackCBishop = blackCBishop;
             return this;
         }
 
-        public LegalMoves BlackCPawn(String[] blackCPawn) {
+        public LegalMovesBuilder BlackCPawn(String[] blackCPawn) {
             this.blackCPawn = blackCPawn;
             return this;
         }
 
-        public LegalMoves BlackDPawn(String[] blackDPawn) {
+        public LegalMovesBuilder BlackDPawn(String[] blackDPawn) {
             this.blackDPawn = blackDPawn;
             return this;
         }
 
-        public LegalMoves BlackEPawn(String[] blackEPawn) {
+        public LegalMovesBuilder BlackEPawn(String[] blackEPawn) {
             this.blackEPawn = blackEPawn;
             return this;
         }
 
-        public LegalMoves BlackFBishop(String[] blackFBishop) {
+        public LegalMovesBuilder BlackFBishop(String[] blackFBishop) {
             this.blackFBishop = blackFBishop;
             return this;
         }
 
-        public LegalMoves BlackFPawn(String[] blackFPawn) {
+        public LegalMovesBuilder BlackFPawn(String[] blackFPawn) {
             this.blackFPawn = blackFPawn;
             return this;
         }
 
-        public LegalMoves BlackGKnight(String[] blackGKnight) {
+        public LegalMovesBuilder BlackGKnight(String[] blackGKnight) {
             this.blackGKnight = blackGKnight;
             return this;
         }
 
-        public LegalMoves BlackGPawn(String[] blackGPawn) {
+        public LegalMovesBuilder BlackGPawn(String[] blackGPawn) {
             this.blackGPawn = blackGPawn;
             return this;
         }
 
-        public LegalMoves BlackHPawn(String[] blackHPawn) {
+        public LegalMovesBuilder BlackHPawn(String[] blackHPawn) {
             this.blackHPawn = blackHPawn;
             return this;
         }
 
-        public LegalMoves BlackHRook(String[] blackHRook) {
+        public LegalMovesBuilder BlackHRook(String[] blackHRook) {
             this.blackHRook = blackHRook;
             return this;
         }
 
-        public LegalMoves BlackKing(String[] blackKing) {
+        public LegalMovesBuilder BlackKing(String[] blackKing) {
             this.blackKing = blackKing;
             return this;
         }
 
-        public LegalMoves BlackQueen(String[] blackQueen) {
+        public LegalMovesBuilder BlackQueen(String[] blackQueen) {
             this.blackQueen = blackQueen;
             return this;
         }
 
-        public LegalMoves PromotionBishopA(String[] promotionBishopA) {
+        public LegalMovesBuilder PromotionBishopA(String[] promotionBishopA) {
             this.promotionBishopA = promotionBishopA;
             return this;
         }
 
-        public LegalMoves PromotionBishopB(String[] promotionBishopB) {
+        public LegalMovesBuilder PromotionBishopB(String[] promotionBishopB) {
             this.promotionBishopB = promotionBishopB;
             return this;
         }
 
-        public LegalMoves PromotionBishopC(String[] promotionBishopC) {
+        public LegalMovesBuilder PromotionBishopC(String[] promotionBishopC) {
             this.promotionBishopC = promotionBishopC;
             return this;
         }
 
-        public LegalMoves PromotionBishopD(String[] promotionBishopD) {
+        public LegalMovesBuilder PromotionBishopD(String[] promotionBishopD) {
             this.promotionBishopD = promotionBishopD;
             return this;
         }
 
-        public LegalMoves PromotionBishopE(String[] promotionBishopE) {
+        public LegalMovesBuilder PromotionBishopE(String[] promotionBishopE) {
             this.promotionBishopE = promotionBishopE;
             return this;
         }
 
-        public LegalMoves PromotionBishopF(String[] promotionBishopF) {
+        public LegalMovesBuilder PromotionBishopF(String[] promotionBishopF) {
             this.promotionBishopF = promotionBishopF;
             return this;
         }
 
-        public LegalMoves PromotionBishopG(String[] promotionBishopG) {
+        public LegalMovesBuilder PromotionBishopG(String[] promotionBishopG) {
             this.promotionBishopG = promotionBishopG;
             return this;
         }
 
-        public LegalMoves PromotionBishopH(String[] promotionBishopH) {
+        public LegalMovesBuilder PromotionBishopH(String[] promotionBishopH) {
             this.promotionBishopH = promotionBishopH;
             return this;
         }
 
-        public LegalMoves PromotionKnightA(String[] promotionKnightA) {
+        public LegalMovesBuilder PromotionKnightA(String[] promotionKnightA) {
             this.promotionKnightA = promotionKnightA;
             return this;
         }
 
-        public LegalMoves PromotionKnightB(String[] promotionKnightB) {
+        public LegalMovesBuilder PromotionKnightB(String[] promotionKnightB) {
             this.promotionKnightB = promotionKnightB;
             return this;
         }
 
-        public LegalMoves PromotionKnightC(String[] promotionKnightC) {
+        public LegalMovesBuilder PromotionKnightC(String[] promotionKnightC) {
             this.promotionKnightC = promotionKnightC;
             return this;
         }
 
-        public LegalMoves PromotionKnightD(String[] promotionKnightD) {
+        public LegalMovesBuilder PromotionKnightD(String[] promotionKnightD) {
             this.promotionKnightD = promotionKnightD;
             return this;
         }
 
-        public LegalMoves PromotionKnightE(String[] promotionKnightE) {
+        public LegalMovesBuilder PromotionKnightE(String[] promotionKnightE) {
             this.promotionKnightE = promotionKnightE;
             return this;
         }
 
-        public LegalMoves PromotionKnightF(String[] promotionKnightF) {
+        public LegalMovesBuilder PromotionKnightF(String[] promotionKnightF) {
             this.promotionKnightF = promotionKnightF;
             return this;
         }
 
-        public LegalMoves PromotionKnightG(String[] promotionKnightG) {
+        public LegalMovesBuilder PromotionKnightG(String[] promotionKnightG) {
             this.promotionKnightG = promotionKnightG;
             return this;
         }
 
-        public LegalMoves PromotionKnightH(String[] promotionKnightH) {
+        public LegalMovesBuilder PromotionKnightH(String[] promotionKnightH) {
             this.promotionKnightH = promotionKnightH;
             return this;
         }
 
-        public LegalMoves PromotionQueenA(String[] promotionQueenA) {
+        public LegalMovesBuilder PromotionQueenA(String[] promotionQueenA) {
             this.promotionQueenA = promotionQueenA;
             return this;
         }
 
-        public LegalMoves PromotionQueenB(String[] promotionQueenB) {
+        public LegalMovesBuilder PromotionQueenB(String[] promotionQueenB) {
             this.promotionQueenB = promotionQueenB;
             return this;
         }
 
-        public LegalMoves PromotionQueenC(String[] promotionQueenC) {
+        public LegalMovesBuilder PromotionQueenC(String[] promotionQueenC) {
             this.promotionQueenC = promotionQueenC;
             return this;
         }
 
-        public LegalMoves PromotionQueenD(String[] promotionQueenD) {
+        public LegalMovesBuilder PromotionQueenD(String[] promotionQueenD) {
             this.promotionQueenD = promotionQueenD;
             return this;
         }
 
-        public LegalMoves PromotionQueenE(String[] promotionQueenE) {
+        public LegalMovesBuilder PromotionQueenE(String[] promotionQueenE) {
             this.promotionQueenE = promotionQueenE;
             return this;
         }
 
-        public LegalMoves PromotionQueenF(String[] promotionQueenF) {
+        public LegalMovesBuilder PromotionQueenF(String[] promotionQueenF) {
             this.promotionQueenF = promotionQueenF;
             return this;
         }
 
-        public LegalMoves PromotionQueenG(String[] promotionQueenG) {
+        public LegalMovesBuilder PromotionQueenG(String[] promotionQueenG) {
             this.promotionQueenG = promotionQueenG;
             return this;
         }
 
-        public LegalMoves PromotionQueenH(String[] promotionQueenH) {
+        public LegalMovesBuilder PromotionQueenH(String[] promotionQueenH) {
             this.promotionQueenH = promotionQueenH;
             return this;
         }
 
-        public LegalMoves PromotionRookA(String[] promotionRookA) {
+        public LegalMovesBuilder PromotionRookA(String[] promotionRookA) {
             this.promotionRookA = promotionRookA;
             return this;
         }
 
-        public LegalMoves PromotionRookB(String[] promotionRookB) {
+        public LegalMovesBuilder PromotionRookB(String[] promotionRookB) {
             this.promotionRookB = promotionRookB;
             return this;
         }
 
-        public LegalMoves PromotionRookC(String[] promotionRookC) {
+        public LegalMovesBuilder PromotionRookC(String[] promotionRookC) {
             this.promotionRookC = promotionRookC;
             return this;
         }
 
-        public LegalMoves PromotionRookD(String[] promotionRookD) {
+        public LegalMovesBuilder PromotionRookD(String[] promotionRookD) {
             this.promotionRookD = promotionRookD;
             return this;
         }
 
-        public LegalMoves PromotionRookE(String[] promotionRookE) {
+        public LegalMovesBuilder PromotionRookE(String[] promotionRookE) {
             this.promotionRookE = promotionRookE;
             return this;
         }
 
-        public LegalMoves PromotionRookF(String[] promotionRookF) {
+        public LegalMovesBuilder PromotionRookF(String[] promotionRookF) {
             this.promotionRookF = promotionRookF;
             return this;
         }
 
-        public LegalMoves PromotionRookG(String[] promotionRookG) {
+        public LegalMovesBuilder PromotionRookG(String[] promotionRookG) {
             this.promotionRookG = promotionRookG;
             return this;
         }
 
-        public LegalMoves PromotionRookH(String[] promotionRookH) {
+        public LegalMovesBuilder PromotionRookH(String[] promotionRookH) {
             this.promotionRookH = promotionRookH;
             return this;
         }
 
-        public LegalMoves WhiteAPawn(String[] whiteAPawn) {
+        public LegalMovesBuilder WhiteAPawn(String[] whiteAPawn) {
             this.whiteAPawn = whiteAPawn;
             return this;
         }
 
-        public LegalMoves WhiteARook(String[] whiteARook) {
+        public LegalMovesBuilder WhiteARook(String[] whiteARook) {
             this.whiteARook = whiteARook;
             return this;
         }
 
-        public LegalMoves WhiteBKnight(String[] whiteBKnight) {
+        public LegalMovesBuilder WhiteBKnight(String[] whiteBKnight) {
             this.whiteBKnight = whiteBKnight;
             return this;
         }
 
-        public LegalMoves WhiteBPawn(String[] whiteBPawn) {
+        public LegalMovesBuilder WhiteBPawn(String[] whiteBPawn) {
             this.whiteBPawn = whiteBPawn;
             return this;
         }
 
-        public LegalMoves WhiteCBishop(String[] whiteCBishop) {
+        public LegalMovesBuilder WhiteCBishop(String[] whiteCBishop) {
             this.whiteCBishop = whiteCBishop;
             return this;
         }
 
-        public LegalMoves WhiteCPawn(String[] whiteCPawn) {
+        public LegalMovesBuilder WhiteCPawn(String[] whiteCPawn) {
             this.whiteCPawn = whiteCPawn;
             return this;
         }
 
-        public LegalMoves WhiteDPawn(String[] whiteDPawn) {
+        public LegalMovesBuilder WhiteDPawn(String[] whiteDPawn) {
             this.whiteDPawn = whiteDPawn;
             return this;
         }
 
-        public LegalMoves WhiteEPawn(String[] whiteEPawn) {
+        public LegalMovesBuilder WhiteEPawn(String[] whiteEPawn) {
             this.whiteEPawn = whiteEPawn;
             return this;
         }
 
-        public LegalMoves WhiteFBishop(String[] whiteFBishop) {
+        public LegalMovesBuilder WhiteFBishop(String[] whiteFBishop) {
             this.whiteFBishop = whiteFBishop;
             return this;
         }
 
-        public LegalMoves WhiteFPawn(String[] whiteFPawn) {
+        public LegalMovesBuilder WhiteFPawn(String[] whiteFPawn) {
             this.whiteFPawn = whiteFPawn;
             return this;
         }
 
-        public LegalMoves WhiteGKnight(String[] whiteGKnight) {
+        public LegalMovesBuilder WhiteGKnight(String[] whiteGKnight) {
             this.whiteGKnight = whiteGKnight;
             return this;
         }
 
-        public LegalMoves WhiteGPawn(String[] whiteGPawn) {
+        public LegalMovesBuilder WhiteGPawn(String[] whiteGPawn) {
             this.whiteGPawn = whiteGPawn;
             return this;
         }
 
-        public LegalMoves WhiteHPawn(String[] whiteHPawn) {
+        public LegalMovesBuilder WhiteHPawn(String[] whiteHPawn) {
             this.whiteHPawn = whiteHPawn;
             return this;
         }
 
-        public LegalMoves WhiteHRook(String[] whiteHRook) {
+        public LegalMovesBuilder WhiteHRook(String[] whiteHRook) {
             this.whiteHRook = whiteHRook;
             return this;
         }
 
-        public LegalMoves WhiteKing(String[] whiteKing) {
+        public LegalMovesBuilder WhiteKing(String[] whiteKing) {
             this.whiteKing = whiteKing;
             return this;
         }
 
-        public LegalMoves WhiteQueen(String[] whiteQueen) {
+        public LegalMovesBuilder WhiteQueen(String[] whiteQueen) {
             this.whiteQueen = whiteQueen;
             return this;
         }

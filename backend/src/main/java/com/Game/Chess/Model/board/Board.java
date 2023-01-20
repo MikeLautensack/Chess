@@ -1,12 +1,13 @@
 package com.Game.Chess.Model.board;
 
-import java.lang.reflect.Field;
 import java.util.HashMap;
-
+import com.Game.Chess.Model.piece.Bishop;
+import com.Game.Chess.Model.piece.King;
 import com.Game.Chess.Model.piece.Knight;
-import com.Game.Chess.Model.piece.Piece;
+import com.Game.Chess.Model.piece.Pawn;
 import com.Game.Chess.Model.piece.PieceColor;
 import com.Game.Chess.Model.piece.Queen;
+import com.Game.Chess.Model.piece.Rook;
 import com.Game.Chess.ResourceRepresentationClasses.BoardConfig;
 
 public class Board {
@@ -36,7 +37,7 @@ public class Board {
                 // Build piece and add to square
                 Coordinates squareCoordinate = newSquare.getSquareCoordinate();
                 String coordinate = squareCoordinate.getCoordinate();
-                HashMap<String, String> boardConfigMap = createConfigMap(boardConfig);
+                HashMap<String, String> boardConfigMap = BoardConfig.createConfigMap(boardConfig);
 
                 boardConfigMap.forEach((k, v) -> {
                     if (coordinate == k) {

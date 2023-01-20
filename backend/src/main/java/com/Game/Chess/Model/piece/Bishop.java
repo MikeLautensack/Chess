@@ -2,11 +2,10 @@ package com.Game.Chess.Model.piece;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.Game.Chess.Model.board.Board;
 import com.Game.Chess.Model.board.Square;
-import com.Game.Chess.Model.board.SquareIndex;
 
-public class Bishop extends Piece implements GetLegalMoves {
+public class Bishop extends Piece {
 
     private List<Square> candidateMoves = new ArrayList<>();
 
@@ -16,7 +15,8 @@ public class Bishop extends Piece implements GetLegalMoves {
 
     @Override
     public List<Square> getMoves(Board board) {
-
+        List<Square> temp = new ArrayList<>();
+        return temp;
     }
 
 }

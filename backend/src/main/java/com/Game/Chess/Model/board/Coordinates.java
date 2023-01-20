@@ -6,7 +6,7 @@ public class Coordinates {
     private String rank;
     private String coordinate;
 
-    Coordinates(String file, String rank, String coordinate) {
+    public Coordinates(String file, String rank, String coordinate) {
 
         this.file = file;
         this.rank = rank;
