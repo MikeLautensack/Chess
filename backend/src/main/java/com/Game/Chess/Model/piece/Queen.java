@@ -1,22 +1,33 @@
 package com.Game.Chess.Model.piece;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+
 import com.Game.Chess.Model.board.Board;
+import com.Game.Chess.Model.board.Coordinates;
 import com.Game.Chess.Model.board.Square;
 
 public class Queen extends Piece {
-
-    private List<Square> candidateMoves = new ArrayList<>();
 
     public Queen(PieceColor color, String id) {
         super(color, id);
     }
 
     @Override
-    public List<Square> getMoves(Board board) {
-        List<Square> temp = new ArrayList<>();
-        return temp;
+    public List<Coordinates> getMoves(Board board) {
+        List<Coordinates> moves = Collections.emptyList();
+        Map<Coordinates, Square> map = board.getSquareCoordinatesMap();
+        Coordinates current = this.getSquare().getSquareCoordinate();
+        getCoordinatesOnVector(moves, map, current, 0, 1, this);
+        getCoordinatesOnVector(moves, map, current, 0, -1, this);
+        getCoordinatesOnVector(moves, map, current, 1, 0, this);
+        getCoordinatesOnVector(moves, map, current, -1, 0, this);
+        getCoordinatesOnVector(moves, map, current, 1, 1, this);
+        getCoordinatesOnVector(moves, map, current, -1, -1, this);
+        getCoordinatesOnVector(moves, map, current, 1, -1, this);
+        getCoordinatesOnVector(moves, map, current, -1, 1, this);
+        return moves;
     }
 
 }

@@ -2,45 +2,52 @@ package com.Game.Chess.Model.board;
 
 public class Coordinates {
 
-    private String file;
-    private String rank;
-    private String coordinate;
+    private int file;
+    private int rank;
+    private String id;
+    private static File[] fileArr = File.values();
 
-    public Coordinates(String file, String rank, String coordinate) {
+    public Coordinates(int file, int rank, String id) {
 
         this.file = file;
         this.rank = rank;
-        this.coordinate = coordinate;
+        this.id = id;
 
     }
 
-    public String getFile() {
+    public static Coordinates build(Coordinates current, int fileOffset, int rankOffset) {
+        return new Coordinates(current.getFile() + fileOffset, current.getRank() + rankOffset,
+                fileArr[current.getFile() + fileOffset].toString()
+                        .concat(String.valueOf(current.getRank() + rankOffset)));
+    }
+
+    public int getFile() {
         return file;
     }
 
-    public void setFile(String file) {
+    public void setFile(int file) {
         this.file = file;
     }
 
-    public String getRank() {
+    public int getRank() {
         return rank;
     }
 
-    public void setRank(String rank) {
+    public void setRank(int rank) {
         this.rank = rank;
     }
 
-    public String getCoordinate() {
-        return coordinate;
+    public String getID() {
+        return id;
     }
 
-    public void setCoordinate(String coordinate) {
-        this.coordinate = coordinate;
+    public void setID(String id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Coordinates [file=" + file + ", rank=" + rank + ", coordinate=" + coordinate + "]";
+        return "Coordinates [file=" + file + ", rank=" + rank + ", id=" + id + "]";
     }
 
 }

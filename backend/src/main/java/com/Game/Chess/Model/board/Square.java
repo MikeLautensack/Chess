@@ -4,29 +4,18 @@ import com.Game.Chess.Model.piece.Piece;
 
 public class Square {
 
-    private boolean occupied;
     private SquareColor color;
     private Coordinates squareCoordinate;
     private Piece pieceOnSquare;
-    private SquareIndex index;
+    private boolean occupied;
 
-    public Square(boolean occupied, SquareColor color, Coordinates squareCoordinate, Piece pieceOnSquare,
-            SquareIndex index) {
+    public Square(SquareColor color, Coordinates squareCoordinate) {
 
-        this.occupied = occupied;
         this.color = color;
         this.squareCoordinate = squareCoordinate;
-        this.pieceOnSquare = pieceOnSquare;
-        this.index = index;
+        this.occupied = false;
+        this.pieceOnSquare = null;
 
-    }
-
-    public boolean isOccupied() {
-        return occupied;
-    }
-
-    public void setOccupied(boolean occupied) {
-        this.occupied = occupied;
     }
 
     public SquareColor getColor() {
@@ -53,28 +42,28 @@ public class Square {
         this.pieceOnSquare = pieceOnSquare;
     }
 
-    public SquareIndex getIndex() {
-        return index;
+    public boolean isOccupied() {
+        return occupied;
     }
 
-    public void setIndex(SquareIndex index) {
-        this.index = index;
+    public void setOccupied(boolean occupied) {
+        this.occupied = occupied;
     }
 
     @Override
     public String toString() {
-        return "Square [occupied=" + occupied + ", color=" + color + ", coordinate=" + squareCoordinate + "]";
+        return "Square [color=" + color + ", squareCoordinate=" + squareCoordinate + ", pieceOnSquare=" + pieceOnSquare
+                + ", occupied=" + occupied + "]";
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + (occupied ? 1231 : 1237);
         result = prime * result + ((color == null) ? 0 : color.hashCode());
         result = prime * result + ((squareCoordinate == null) ? 0 : squareCoordinate.hashCode());
         result = prime * result + ((pieceOnSquare == null) ? 0 : pieceOnSquare.hashCode());
-        result = prime * result + ((index == null) ? 0 : index.hashCode());
+        result = prime * result + (occupied ? 1231 : 1237);
         return result;
     }
 
@@ -87,8 +76,6 @@ public class Square {
         if (getClass() != obj.getClass())
             return false;
         Square other = (Square) obj;
-        if (occupied != other.occupied)
-            return false;
         if (color != other.color)
             return false;
         if (squareCoordinate == null) {
@@ -101,10 +88,7 @@ public class Square {
                 return false;
         } else if (!pieceOnSquare.equals(other.pieceOnSquare))
             return false;
-        if (index == null) {
-            if (other.index != null)
-                return false;
-        } else if (!index.equals(other.index))
+        if (occupied != other.occupied)
             return false;
         return true;
     }

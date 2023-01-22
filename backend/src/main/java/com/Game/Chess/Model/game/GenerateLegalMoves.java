@@ -1,12 +1,12 @@
 package com.Game.Chess.Model.game;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.Game.Chess.Model.board.Board;
+import com.Game.Chess.Model.board.Coordinates;
 import com.Game.Chess.Model.board.Square;
 import com.Game.Chess.Model.piece.Piece;
 import com.Game.Chess.ResourceRepresentationClasses.BoardConfig;
@@ -38,14 +38,14 @@ public class GenerateLegalMoves {
         Map<String, String[]> map = new HashMap<>();
         for (int i = 0; i < pieces.size(); i++) {
             Piece piece = pieces.get(i);
-            List<Square> pieceMoves = piece.getMoves(board);
+            List<Coordinates> pieceMoves = piece.getMoves(board);
             List<String> stringMoves = new ArrayList<>();
             for (int j = 0; j < pieceMoves.size(); j++) {
-                Square square = pieceMoves.get(j);
-                String squareID = square.getSquareCoordinate().getCoordinate();
-                stringMoves.add(squareID);
+                Coordinates coordinate = pieceMoves.get(j);
+                String coordinateString = coordinate.getID();
+                stringMoves.add(coordinateString);
             }
-            String[] arr = stringMoves.toArray(new String[0]);
+            String[] arr = stringMoves.toArray(new String[stringMoves.size()]);
             map.put(piece.getId(), arr);
         }
 

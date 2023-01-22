@@ -1,22 +1,37 @@
 package com.Game.Chess.Model.piece;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import com.Game.Chess.Model.board.Board;
-import com.Game.Chess.Model.board.Square;
+import com.Game.Chess.Model.board.Coordinates;
 
 public class King extends Piece {
-
-    private List<Square> candidateMoves = new ArrayList<>();
 
     public King(PieceColor color, String id) {
         super(color, id);
     }
 
     @Override
-    public List<Square> getMoves(Board board) {
-        List<Square> temp = new ArrayList<>();
-        return temp;
+    public List<Coordinates> getMoves(Board board) {
+        List<Coordinates> moves = Collections.emptyList();
+        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, 1));
+        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 1, 1));
+        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 1, 0));
+        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 1, -1));
+        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, -1));
+        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), -1, -1));
+        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), -1, 0));
+        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), -1, 1));
+
+        return moves.stream()
+                // Filter coordinates off board
+                .filter((coordinate) -> board.getSquareCoordinatesMap().containsKey(coordinate))
+                // Filter coordinates that contain a piece of the same color as this
+                .filter((coordinate) -> !(this.getColor()
+                        .equals(board.getSquareCoordinatesMap().get(coordinate).getPieceOnSquare().getColor())))
+                .collect(Collectors.toList());
     }
 
 }
