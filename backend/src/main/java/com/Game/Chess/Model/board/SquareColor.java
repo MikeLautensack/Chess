@@ -1,5 +1,5 @@
-package com.Game.Chess.Model.board;
+package com.Game.Chess.Model.Board;
 
 public enum SquareColor {
-    LIGHT,DARK
+    LIGHT, DARK
 }

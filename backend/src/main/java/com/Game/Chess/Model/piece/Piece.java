@@ -1,11 +1,11 @@
-package com.Game.Chess.Model.piece;
+package com.Game.Chess.Model.Piece;
 
 import java.util.List;
 import java.util.Map;
 
-import com.Game.Chess.Model.board.Board;
-import com.Game.Chess.Model.board.Coordinates;
-import com.Game.Chess.Model.board.Square;
+import com.Game.Chess.Model.Board.Board;
+import com.Game.Chess.Model.Board.Coordinates;
+import com.Game.Chess.Model.Board.Square;
 
 public abstract class Piece {
 

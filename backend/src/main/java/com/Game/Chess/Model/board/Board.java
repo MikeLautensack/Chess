@@ -1,13 +1,14 @@
-package com.Game.Chess.Model.board;
+package com.Game.Chess.Model.Board;
 
 import java.util.HashMap;
-import com.Game.Chess.Model.piece.Bishop;
-import com.Game.Chess.Model.piece.King;
-import com.Game.Chess.Model.piece.Knight;
-import com.Game.Chess.Model.piece.Pawn;
-import com.Game.Chess.Model.piece.PieceColor;
-import com.Game.Chess.Model.piece.Queen;
-import com.Game.Chess.Model.piece.Rook;
+
+import com.Game.Chess.Model.Piece.Bishop;
+import com.Game.Chess.Model.Piece.King;
+import com.Game.Chess.Model.Piece.Knight;
+import com.Game.Chess.Model.Piece.Pawn;
+import com.Game.Chess.Model.Piece.PieceColor;
+import com.Game.Chess.Model.Piece.Queen;
+import com.Game.Chess.Model.Piece.Rook;
 import com.Game.Chess.ResourceRepresentationClasses.BoardConfig;
 
 public class Board {

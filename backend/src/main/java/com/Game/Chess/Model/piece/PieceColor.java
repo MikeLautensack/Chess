@@ -1,5 +1,5 @@
-package com.Game.Chess.Model.piece;
+package com.Game.Chess.Model.Piece;
 
 public enum PieceColor {
-    WHITE,BLACK
+    WHITE, BLACK
 }

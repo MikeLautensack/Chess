@@ -1,11 +1,11 @@
-package com.Game.Chess.Model.piece;
+package com.Game.Chess.Model.Piece;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.Game.Chess.Model.board.Board;
-import com.Game.Chess.Model.board.Coordinates;
+import com.Game.Chess.Model.Board.Board;
+import com.Game.Chess.Model.Board.Coordinates;
 
 public class King extends Piece {
 
