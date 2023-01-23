@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Game.Chess.Model.Game.GenerateLegalMoves;
+import com.Game.Chess.Model.game.GenerateLegalMoves;
 import com.Game.Chess.ResourceRepresentationClasses.BoardConfig;
 import com.Game.Chess.ResourceRepresentationClasses.LegalMoves;
 

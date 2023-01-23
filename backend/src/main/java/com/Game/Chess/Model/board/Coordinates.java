@@ -1,4 +1,4 @@
-package com.Game.Chess.Model.Board;
+package com.Game.Chess.Model.board;
 
 public class Coordinates {
 

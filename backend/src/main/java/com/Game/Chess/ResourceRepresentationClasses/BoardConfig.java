@@ -69,6 +69,80 @@ public class BoardConfig {
     private String g1;
     private String h1;
 
+    public BoardConfig(String a8, String b8, String c8, String d8, String e8, String f8, String g8, String h8,
+            String a7, String b7, String c7, String d7, String e7, String f7, String g7, String h7, String a6,
+            String b6, String c6, String d6, String e6, String f6, String g6, String h6, String a5, String b5,
+            String c5, String d5, String e5, String f5, String g5, String h5, String a4, String b4, String c4,
+            String d4, String e4, String f4, String g4, String h4, String a3, String b3, String c3, String d3,
+            String e3, String f3, String g3, String h3, String a2, String b2, String c2, String d2, String e2,
+            String f2, String g2, String h2, String a1, String b1, String c1, String d1, String e1, String f1,
+            String g1, String h1) {
+        this.a8 = a8;
+        this.b8 = b8;
+        this.c8 = c8;
+        this.d8 = d8;
+        this.e8 = e8;
+        this.f8 = f8;
+        this.g8 = g8;
+        this.h8 = h8;
+        this.a7 = a7;
+        this.b7 = b7;
+        this.c7 = c7;
+        this.d7 = d7;
+        this.e7 = e7;
+        this.f7 = f7;
+        this.g7 = g7;
+        this.h7 = h7;
+        this.a6 = a6;
+        this.b6 = b6;
+        this.c6 = c6;
+        this.d6 = d6;
+        this.e6 = e6;
+        this.f6 = f6;
+        this.g6 = g6;
+        this.h6 = h6;
+        this.a5 = a5;
+        this.b5 = b5;
+        this.c5 = c5;
+        this.d5 = d5;
+        this.e5 = e5;
+        this.f5 = f5;
+        this.g5 = g5;
+        this.h5 = h5;
+        this.a4 = a4;
+        this.b4 = b4;
+        this.c4 = c4;
+        this.d4 = d4;
+        this.e4 = e4;
+        this.f4 = f4;
+        this.g4 = g4;
+        this.h4 = h4;
+        this.a3 = a3;
+        this.b3 = b3;
+        this.c3 = c3;
+        this.d3 = d3;
+        this.e3 = e3;
+        this.f3 = f3;
+        this.g3 = g3;
+        this.h3 = h3;
+        this.a2 = a2;
+        this.b2 = b2;
+        this.c2 = c2;
+        this.d2 = d2;
+        this.e2 = e2;
+        this.f2 = f2;
+        this.g2 = g2;
+        this.h2 = h2;
+        this.a1 = a1;
+        this.b1 = b1;
+        this.c1 = c1;
+        this.d1 = d1;
+        this.e1 = e1;
+        this.f1 = f1;
+        this.g1 = g1;
+        this.h1 = h1;
+    }
+
     public BoardConfig() {
 
     }

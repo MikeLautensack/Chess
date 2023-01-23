@@ -1,5 +1,7 @@
 package com.Game.Chess.ResourceRepresentationClasses;
 
+import java.util.Arrays;
+
 public class LegalMoves {
 
     private String[] blackAPawn;
@@ -325,6 +327,48 @@ public class LegalMoves {
 
     public String[] getWhiteQueen() {
         return whiteQueen;
+    }
+
+    @Override
+    public String toString() {
+        return "LegalMoves [blackAPawn=" + Arrays.toString(blackAPawn) + ", blackARook=" + Arrays.toString(blackARook)
+                + ", blackBKnight=" + Arrays.toString(blackBKnight) + ", blackBPawn=" + Arrays.toString(blackBPawn)
+                + ", blackCBishop=" + Arrays.toString(blackCBishop) + ", blackCPawn=" + Arrays.toString(blackCPawn)
+                + ", blackDPawn=" + Arrays.toString(blackDPawn) + ", blackEPawn=" + Arrays.toString(blackEPawn)
+                + ", blackFBishop=" + Arrays.toString(blackFBishop) + ", blackFPawn=" + Arrays.toString(blackFPawn)
+                + ", blackGKnight=" + Arrays.toString(blackGKnight) + ", blackGPawn=" + Arrays.toString(blackGPawn)
+                + ", blackHPawn=" + Arrays.toString(blackHPawn) + ", blackHRook=" + Arrays.toString(blackHRook)
+                + ", blackKing=" + Arrays.toString(blackKing) + ", blackQueen=" + Arrays.toString(blackQueen)
+                + ", promotionBishopA=" + Arrays.toString(promotionBishopA) + ", promotionBishopB="
+                + Arrays.toString(promotionBishopB) + ", promotionBishopC=" + Arrays.toString(promotionBishopC)
+                + ", promotionBishopD=" + Arrays.toString(promotionBishopD) + ", promotionBishopE="
+                + Arrays.toString(promotionBishopE) + ", promotionBishopF=" + Arrays.toString(promotionBishopF)
+                + ", promotionBishopG=" + Arrays.toString(promotionBishopG) + ", promotionBishopH="
+                + Arrays.toString(promotionBishopH) + ", promotionKnightA=" + Arrays.toString(promotionKnightA)
+                + ", promotionKnightB=" + Arrays.toString(promotionKnightB) + ", promotionKnightC="
+                + Arrays.toString(promotionKnightC) + ", promotionKnightD=" + Arrays.toString(promotionKnightD)
+                + ", promotionKnightE=" + Arrays.toString(promotionKnightE) + ", promotionKnightF="
+                + Arrays.toString(promotionKnightF) + ", promotionKnightG=" + Arrays.toString(promotionKnightG)
+                + ", promotionKnightH=" + Arrays.toString(promotionKnightH) + ", promotionQueenA="
+                + Arrays.toString(promotionQueenA) + ", promotionQueenB=" + Arrays.toString(promotionQueenB)
+                + ", promotionQueenC=" + Arrays.toString(promotionQueenC) + ", promotionQueenD="
+                + Arrays.toString(promotionQueenD) + ", promotionQueenE=" + Arrays.toString(promotionQueenE)
+                + ", promotionQueenF=" + Arrays.toString(promotionQueenF) + ", promotionQueenG="
+                + Arrays.toString(promotionQueenG) + ", promotionQueenH=" + Arrays.toString(promotionQueenH)
+                + ", promotionRookA=" + Arrays.toString(promotionRookA) + ", promotionRookB="
+                + Arrays.toString(promotionRookB) + ", promotionRookC=" + Arrays.toString(promotionRookC)
+                + ", promotionRookD=" + Arrays.toString(promotionRookD) + ", promotionRookE="
+                + Arrays.toString(promotionRookE) + ", promotionRookF=" + Arrays.toString(promotionRookF)
+                + ", promotionRookG=" + Arrays.toString(promotionRookG) + ", promotionRookH="
+                + Arrays.toString(promotionRookH) + ", whiteAPawn=" + Arrays.toString(whiteAPawn) + ", whiteARook="
+                + Arrays.toString(whiteARook) + ", whiteBKnight=" + Arrays.toString(whiteBKnight) + ", whiteBPawn="
+                + Arrays.toString(whiteBPawn) + ", whiteCBishop=" + Arrays.toString(whiteCBishop) + ", whiteCPawn="
+                + Arrays.toString(whiteCPawn) + ", whiteDPawn=" + Arrays.toString(whiteDPawn) + ", whiteEPawn="
+                + Arrays.toString(whiteEPawn) + ", whiteFBishop=" + Arrays.toString(whiteFBishop) + ", whiteFPawn="
+                + Arrays.toString(whiteFPawn) + ", whiteGKnight=" + Arrays.toString(whiteGKnight) + ", whiteGPawn="
+                + Arrays.toString(whiteGPawn) + ", whiteHPawn=" + Arrays.toString(whiteHPawn) + ", whiteHRook="
+                + Arrays.toString(whiteHRook) + ", whiteKing=" + Arrays.toString(whiteKing) + ", whiteQueen="
+                + Arrays.toString(whiteQueen) + "]";
     }
 
     public static class LegalMovesBuilder {

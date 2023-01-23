@@ -1,12 +1,12 @@
-package com.Game.Chess.Model.Piece;
+package com.Game.Chess.Model.piece;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import com.Game.Chess.Model.Board.Board;
-import com.Game.Chess.Model.Board.Coordinates;
-import com.Game.Chess.Model.Board.Square;
+import com.Game.Chess.Model.board.Board;
+import com.Game.Chess.Model.board.Coordinates;
+import com.Game.Chess.Model.board.Square;
 
 public class Queen extends Piece {
 

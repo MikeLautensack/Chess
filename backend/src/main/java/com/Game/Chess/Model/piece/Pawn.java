@@ -1,11 +1,11 @@
-package com.Game.Chess.Model.Piece;
+package com.Game.Chess.Model.piece;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.Game.Chess.Model.Board.Board;
-import com.Game.Chess.Model.Board.Coordinates;
+import com.Game.Chess.Model.board.Board;
+import com.Game.Chess.Model.board.Coordinates;
 
 public class Pawn extends Piece {
 
