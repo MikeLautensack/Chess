@@ -1,11 +1,13 @@
 package com.Game.Chess.Model.board;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Coordinates {
 
     private int file;
     private int rank;
     private String id;
-    private static File[] fileArr = File.values();
 
     public Coordinates(int file, int rank, String id) {
 
@@ -16,9 +18,28 @@ public class Coordinates {
     }
 
     public static Coordinates build(Coordinates current, int fileOffset, int rankOffset) {
-        return new Coordinates(current.getFile() + fileOffset, current.getRank() + rankOffset,
-                fileArr[current.getFile() + fileOffset].toString()
-                        .concat(String.valueOf(current.getRank() + rankOffset)));
+        Map<Integer, String> map = new HashMap<>();
+
+        map.put(0, "a");
+        map.put(1, "b");
+        map.put(2, "c");
+        map.put(3, "d");
+        map.put(4, "e");
+        map.put(5, "f");
+        map.put(6, "g");
+        map.put(7, "h");
+
+        int newFile = current.getFile() + fileOffset;
+        int newRank = current.getRank() + rankOffset;
+        String id;
+
+        if (map.containsKey(newFile)) {
+            id = map.get(newFile).concat(String.valueOf(newRank));
+        } else {
+            id = "".concat(String.valueOf(newRank));
+        }
+
+        return new Coordinates(newFile, newRank, id);
     }
 
     public int getFile() {

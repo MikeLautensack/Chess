@@ -1,6 +1,6 @@
 package com.Game.Chess.Model.piece;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,7 +15,7 @@ public class Knight extends Piece {
 
     @Override
     public List<Coordinates> getMoves(Board board) {
-        List<Coordinates> moves = Collections.emptyList();
+        List<Coordinates> moves = new ArrayList<>();
         moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 1, 2));
         moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 2, 1));
         moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 2, -1));

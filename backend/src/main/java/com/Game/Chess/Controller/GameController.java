@@ -16,6 +16,10 @@ public class GameController {
     @PostMapping(path = "/boardConfig")
     public ResponseEntity<LegalMoves> boardConfig(@RequestBody BoardConfig boardConfig) {
 
+        System.out.println("--------------------------");
+        System.out.println(boardConfig);
+        System.out.println("-------------------------- end");
+
         LegalMoves legalMoves = GenerateLegalMoves.generateLegalMoves(boardConfig);
 
         return new ResponseEntity<>(

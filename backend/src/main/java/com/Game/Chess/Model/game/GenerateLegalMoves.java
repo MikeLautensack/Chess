@@ -39,6 +39,9 @@ public class GenerateLegalMoves {
         Map<String, String[]> map = new HashMap<>();
         for (int i = 0; i < pieces.size(); i++) {
             Piece piece = pieces.get(i);
+            if("blackAPawn".equals(piece.getId())) {
+            	System.out.println("debug stop...: ");
+            }
             List<Coordinates> pieceMoves = piece.getMoves(board);
             List<String> stringMoves = new ArrayList<>();
             for (int j = 0; j < pieceMoves.size(); j++) {
@@ -47,6 +50,9 @@ public class GenerateLegalMoves {
                 stringMoves.add(coordinateString);
             }
             String[] arr = stringMoves.toArray(new String[stringMoves.size()]);
+            if("blackAPawn".equals(piece.getId())) {
+            	System.out.println("debug stop...: ");
+            }
             map.put(piece.getId(), arr);
         }
 

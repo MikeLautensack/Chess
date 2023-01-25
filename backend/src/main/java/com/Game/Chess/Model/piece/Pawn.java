@@ -1,6 +1,6 @@
 package com.Game.Chess.Model.piece;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -76,7 +76,7 @@ public class Pawn extends Piece {
             firstMove = false;
         }
 
-        List<Coordinates> moves = Collections.emptyList();
+        List<Coordinates> moves = new ArrayList<>();
         if (firstMove == true) {
             moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, 2));
         }

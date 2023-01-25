@@ -15,7 +15,6 @@ public class Board {
 
     private Square[][] boardArray = new Square[8][8];
     private HashMap<Coordinates, Square> squareCoordinatesMap = new HashMap<>();
-    private HashMap<Square, Square> squareIndexMap = new HashMap<>();
     private File[] fileArray = File.values();
 
     public Board(BoardConfig boardConfig) {
@@ -123,7 +122,6 @@ public class Board {
                 // Create map values
                 squareCoordinatesMap.put(
                         new Coordinates(j, -i + 8, fileArray[j].toString().concat(String.valueOf(-i + 8))), newSquare);
-                squareIndexMap.put(newSquare, boardArray[i][fileIndex]);
 
                 // Increment file index
                 fileIndex++;
@@ -153,14 +151,6 @@ public class Board {
 
     public void setSquareCoordinatesMap(HashMap<Coordinates, Square> squareCoordinatesMap) {
         this.squareCoordinatesMap = squareCoordinatesMap;
-    }
-
-    public HashMap<Square, Square> getSquareIndexMap() {
-        return squareIndexMap;
-    }
-
-    public void setSquareIndexMap(HashMap<Square, Square> squareIndexMap) {
-        this.squareIndexMap = squareIndexMap;
     }
 
     public File[] getFileArray() {

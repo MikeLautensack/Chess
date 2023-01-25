@@ -69,7 +69,7 @@ public abstract class Piece {
 
     @Override
     public String toString() {
-        return "Piece [color=" + color + ", id=" + id + ", square=" + square + "]";
+        return "Piece [color=" + color + ", id=" + id + ", squareCoordinate=" + square.getSquareCoordinate() + "]";
     }
 
 }
