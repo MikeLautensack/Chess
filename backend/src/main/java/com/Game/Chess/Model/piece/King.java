@@ -25,13 +25,14 @@ public class King extends Piece {
         moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), -1, 0));
         moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), -1, 1));
 
-        return moves.stream()
+        return moves
+                .stream()
                 // Filter coordinates off board
                 .filter((coordinate) -> board.getSquareCoordinatesMap().containsKey(coordinate))
                 // Filter coordinates that contain a piece of the same color as this
-                .filter((coordinate) -> !(this.getColor()
-                        .equals(board.getSquareCoordinatesMap().get(coordinate).getPieceOnSquare().getColor())))
+                .filter((coordinate) -> !(compareColor(this, board, coordinate)))
                 .collect(Collectors.toList());
+
     }
 
 }

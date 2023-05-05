@@ -28,10 +28,10 @@ public class Knight extends Piece {
         return moves.stream()
                 // Filter coordinates off board
                 .filter((coordinate) -> board.getSquareCoordinatesMap().containsKey(coordinate))
-                // Filter coordinates that contain a piece of the same color as this
-                .filter((coordinate) -> !(this.getColor()
-                        .equals(board.getSquareCoordinatesMap().get(coordinate).getPieceOnSquare().getColor())))
+                // Filter coordinates that contain a piece if that piece is the same color as this
+                .filter((coordinate) -> !(compareColor(this, board, coordinate)))
                 .collect(Collectors.toList());
+
     }
 
 }

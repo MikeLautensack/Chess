@@ -9,7 +9,6 @@ import com.Game.Chess.Model.board.Coordinates;
 
 public class Pawn extends Piece {
 
-    private boolean firstMove;
     private String startingSquare;
 
     public Pawn(PieceColor color, String id) {
@@ -70,43 +69,77 @@ public class Pawn extends Piece {
     @Override
     public List<Coordinates> getMoves(Board board) {
 
-        if (this.getSquare().getSquareCoordinate().getID().equals(this.startingSquare)) {
-            firstMove = true;
+        if (this.getColor() == PieceColor.WHITE) {
+            boolean firstMove = this.getSquare().getSquareCoordinate().getID().equals(this.startingSquare);
+
+            List<Coordinates> moves = new ArrayList<>();
+            if (firstMove) {
+                moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, 2));
+            }
+            moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, 1));
+            moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 1, 1));
+            moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), -1, 1));
+
+            List<Coordinates> legalMoves = moves.stream()
+                    // Filter coordinates off board
+                    .filter((coordinate) -> board.getSquareCoordinatesMap().containsKey(coordinate))
+
+                    // Filter coordinates that contain a piece if that piece is the same color as this
+                    .filter((coordinate) -> !(compareColor(this, board, coordinate)))
+
+                    // Filter coordinates with piece in front of pawn
+                    .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() + 1
+                            && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile()
+                            && board.getSquareCoordinatesMap().get(coordinate).isOccupied()))
+
+                    // Filter coordinates on left diagonal without a piece on square
+                    .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() + 1
+                            && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile() - 1
+                            && !(board.getSquareCoordinatesMap().get(coordinate).isOccupied())))
+
+                    // Filter coordinates on right diagonal without a piece on square
+                    .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() + 1
+                            && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile() + 1
+                            && !(board.getSquareCoordinatesMap().get(coordinate).isOccupied())))
+
+                    .collect(Collectors.toList());
+            return legalMoves;
         } else {
-            firstMove = false;
+            boolean firstMove = this.getSquare().getSquareCoordinate().getID().equals(this.startingSquare);
+
+            List<Coordinates> moves = new ArrayList<>();
+            if (firstMove) {
+                moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, -2));
+            }
+            moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, -1));
+            moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 1, -1));
+            moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), -1, -1));
+
+            List<Coordinates> legalMoves = moves.stream()
+                    // Filter coordinates off board
+                    .filter((coordinate) -> board.getSquareCoordinatesMap().containsKey(coordinate))
+
+                    // Filter coordinates that contain a piece of the same color as this
+                    //.filter((coordinate) -> !(compareColor(this, board, coordinate)))
+
+                    // Filter coordinates with piece in front of pawn
+                    .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() - 1
+                            && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile()
+                            && board.getSquareCoordinatesMap().get(coordinate).isOccupied()))
+
+                    // Filter coordinates on left diagonal without a piece on square
+                    .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() - 1
+                            && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile() + 1
+                            && !(board.getSquareCoordinatesMap().get(coordinate).isOccupied())))
+
+                    // Filter coordinates on right diagonal without a piece on square
+                    .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() - 1
+                            && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile() - 1
+                            && !(board.getSquareCoordinatesMap().get(coordinate).isOccupied())))
+
+                    .collect(Collectors.toList());
+            return legalMoves;
         }
-
-        List<Coordinates> moves = new ArrayList<>();
-        if (firstMove == true) {
-            moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, 2));
-        }
-        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 0, 1));
-        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), 1, 1));
-        moves.add(Coordinates.build(this.getSquare().getSquareCoordinate(), -1, 1));
-
-        return moves.stream()
-                // Filter coordinates off board
-                .filter((coordinate) -> board.getSquareCoordinatesMap().containsKey(coordinate))
-                // Filter coordinates that contain a piece of the same color as this
-                .filter((coordinate) -> !(this.getColor()
-                        .equals(board.getSquareCoordinatesMap().get(coordinate).getPieceOnSquare().getColor())))
-
-                // Filter coordinats with piece in front of pawn
-                .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() + 1
-                        && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile()
-                        && board.getSquareCoordinatesMap().get(coordinate).isOccupied() == true))
-
-                // Filter coordinates on left diagaonal without a piece on square
-                .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() + 1
-                        && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile() - 1
-                        && board.getSquareCoordinatesMap().get(coordinate).isOccupied() == false))
-
-                // Filter coordinates on right diagaonal without a piece on square
-                .filter((coordinate) -> !(coordinate.getRank() == this.getSquare().getSquareCoordinate().getRank() + 1
-                        && coordinate.getFile() == this.getSquare().getSquareCoordinate().getFile() + 1
-                        && board.getSquareCoordinatesMap().get(coordinate).isOccupied() == false))
-
-                .collect(Collectors.toList());
     }
 
 }

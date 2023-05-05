@@ -1,5 +1,6 @@
 package com.Game.Chess.Model.piece;
 
+import java.io.Console;
 import java.util.List;
 import java.util.Map;
 
@@ -40,6 +41,18 @@ public abstract class Piece {
             }
             moves.add(next);
             next = Coordinates.build(next, fileOffset, rankOffset);
+        }
+    }
+
+    public static boolean compareColor(Piece piece1, Board board, Coordinates coordinate) {
+        if (board.getSquareCoordinatesMap().get(coordinate).getPieceOnSquare() != null) {
+            if (board.getSquareCoordinatesMap().get(coordinate).getPieceOnSquare().getColor() == piece1.getColor()) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
         }
     }
 

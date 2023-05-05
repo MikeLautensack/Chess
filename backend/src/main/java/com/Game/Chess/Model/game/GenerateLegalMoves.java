@@ -1,9 +1,6 @@
 package com.Game.Chess.Model.game;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import com.Game.Chess.Model.board.Board;
 import com.Game.Chess.Model.board.Coordinates;
@@ -39,9 +36,6 @@ public class GenerateLegalMoves {
         Map<String, String[]> map = new HashMap<>();
         for (int i = 0; i < pieces.size(); i++) {
             Piece piece = pieces.get(i);
-            if("blackAPawn".equals(piece.getId())) {
-            	System.out.println("debug stop...: ");
-            }
             List<Coordinates> pieceMoves = piece.getMoves(board);
             List<String> stringMoves = new ArrayList<>();
             for (int j = 0; j < pieceMoves.size(); j++) {
@@ -49,83 +43,36 @@ public class GenerateLegalMoves {
                 String coordinateString = coordinate.getID();
                 stringMoves.add(coordinateString);
             }
-            String[] arr = stringMoves.toArray(new String[stringMoves.size()]);
-            if("blackAPawn".equals(piece.getId())) {
-            	System.out.println("debug stop...: ");
-            }
+            String[] arr = stringMoves.toArray(new String[0]);
             map.put(piece.getId(), arr);
         }
 
         // Build LegalMoves object
-        LegalMoves legalMoves = new LegalMoves.LegalMovesBuilder()
-                .BlackAPawn(map.get("blackAPawn"))
-                .BlackARook(map.get("blackARook"))
-                .BlackBKnight(map.get("blackBKnight"))
-                .BlackBPawn(map.get("blackBPawn"))
-                .BlackCBishop(map.get("blackCBishop"))
-                .BlackCPawn(map.get("blackCPawn"))
-                .BlackDPawn(map.get("blackDPawn"))
-                .BlackEPawn(map.get("blackEPawn"))
-                .BlackFBishop(map.get("blackFBishop"))
-                .BlackFPawn(map.get("blackFPawn"))
-                .BlackGKnight(map.get("blackGKnight"))
-                .BlackGPawn(map.get("blackGPawn"))
-                .BlackHPawn(map.get("blackHPawn"))
-                .BlackHRook(map.get("blackHRook"))
-                .BlackKing(map.get("blackKing"))
-                .BlackQueen(map.get("blackQueen"))
-                .PromotionBishopA(map.get("promotionBishopA"))
-                .PromotionBishopB(map.get("promotionBishopB"))
-                .PromotionBishopC(map.get("promotionBishopC"))
-                .PromotionBishopD(map.get("promotionBishopD"))
-                .PromotionBishopE(map.get("promotionBishopE"))
-                .PromotionBishopF(map.get("promotionBishopF"))
-                .PromotionBishopG(map.get("promotionBishopG"))
-                .PromotionBishopH(map.get("promotionBishopH"))
-                .PromotionKnightA(map.get("promotionKnightA"))
-                .PromotionKnightB(map.get("promotionKnightB"))
-                .PromotionKnightC(map.get("promotionKnightC"))
-                .PromotionKnightD(map.get("promotionKnightD"))
-                .PromotionKnightE(map.get("promotionKnightE"))
-                .PromotionKnightF(map.get("promotionKnightF"))
-                .PromotionKnightG(map.get("promotionKnightG"))
-                .PromotionKnightH(map.get("promotionKnightH"))
-                .PromotionQueenA(map.get("promotionQueenA"))
-                .PromotionQueenB(map.get("promotionQueenB"))
-                .PromotionQueenC(map.get("promotionQueenC"))
-                .PromotionQueenD(map.get("promotionQueenD"))
-                .PromotionQueenE(map.get("promotionQueenE"))
-                .PromotionQueenF(map.get("promotionQueenF"))
-                .PromotionQueenG(map.get("promotionQueenG"))
-                .PromotionQueenH(map.get("promotionQueenH"))
-                .PromotionRookA(map.get("promotionRookA"))
-                .PromotionRookB(map.get("promotionRookB"))
-                .PromotionRookC(map.get("promotionRookC"))
-                .PromotionRookD(map.get("promotionRookD"))
-                .PromotionRookE(map.get("promotionRookE"))
-                .PromotionRookF(map.get("promotionRookF"))
-                .PromotionRookG(map.get("promotionRookG"))
-                .PromotionRookH(map.get("promotionRookH"))
-                .WhiteAPawn(map.get("whiteAPawn"))
-                .WhiteARook(map.get("whiteARook"))
-                .WhiteBKnight(map.get("whiteBKnight"))
-                .WhiteBPawn(map.get("whiteBPawn"))
-                .WhiteCBishop(map.get("whiteCBishop"))
-                .WhiteCPawn(map.get("whiteCPawn"))
-                .WhiteDPawn(map.get("whiteDPawn"))
-                .WhiteEPawn(map.get("whiteEPawn"))
-                .WhiteFBishop(map.get("whiteFBishop"))
-                .WhiteFPawn(map.get("whiteFPawn"))
-                .WhiteGKnight(map.get("whiteGKnight"))
-                .WhiteGPawn(map.get("whiteGPawn"))
-                .WhiteHPawn(map.get("whiteHPawn"))
-                .WhiteHRook(map.get("whiteHRook"))
-                .WhiteKing(map.get("whiteKing"))
-                .WhiteQueen(map.get("whiteQueen"))
-                .build();
+        LegalMoves lm = new LegalMoves(map.get("blackAPawn"), map.get("blackARook"), map.get("blackBKnight"),
+                map.get("blackBPawn"), map.get("blackCBishop"),
+                map.get("blackCPawn"), map.get("blackDPawn"), map.get("blackEPawn"), map.get("blackFBishop"),
+                map.get("blackFPawn"), map.get("blackGKnight"),
+                map.get("blackGPawn"), map.get("blackHPawn"), map.get("blackHRook"), map.get("blackKing"),
+                map.get("blackQueen"), map.get("promotionBishopA"),
+                map.get("promotionBishopB"), map.get("promotionBishopC"), map.get("promotionBishopD"),
+                map.get("promotionBishopE"), map.get("promotionBishopF"),
+                map.get("promotionBishopG"), map.get("promotionBishopH"), map.get("promotionKnightA"),
+                map.get("promotionKnightB"), map.get("promotionKnightC"),
+                map.get("promotionKnightD"), map.get("promotionKnightE"), map.get("promotionKnightF"),
+                map.get("promotionKnightG"), map.get("promotionKnightH"), map.get("promotionQueenA"),
+                map.get("promotionQueenB"), map.get("promotionQueenC"), map.get("promotionQueenD"),
+                map.get("promotionQueenE"),
+                map.get("promotionQueenF"), map.get("promotionQueenG"), map.get("promotionQueenH"),
+                map.get("promotionRookA"), map.get("promotionRookB"), map.get("promotionRookC"),
+                map.get("promotionRookD"), map.get("promotionRookE"), map.get("promotionRookF"),
+                map.get("promotionRookG"), map.get("promotionRookH"), map.get("whiteAPawn"),
+                map.get("whiteARook"), map.get("whiteBKnight"), map.get("whiteBPawn"), map.get("whiteCBishop"),
+                map.get("whiteCPawn"), map.get("whiteDPawn"), map.get("whiteEPawn"), map.get("whiteFBishop"),
+                map.get("whiteFPawn"), map.get("whiteGKnight"), map.get("whiteGPawn"), map.get("whiteHPawn"),
+                map.get("whiteHRook"), map.get("whiteKing"), map.get("whiteQueen"));
 
         // Return LegalMoves object
-        return legalMoves;
+        return lm;
     }
 
 }

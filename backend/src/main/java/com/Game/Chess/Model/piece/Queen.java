@@ -1,6 +1,6 @@
 package com.Game.Chess.Model.piece;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +16,7 @@ public class Queen extends Piece {
 
     @Override
     public List<Coordinates> getMoves(Board board) {
-        List<Coordinates> moves = Collections.emptyList();
+        List<Coordinates> moves = new ArrayList<>();
         Map<Coordinates, Square> map = board.getSquareCoordinatesMap();
         Coordinates current = this.getSquare().getSquareCoordinate();
         getCoordinatesOnVector(moves, map, current, 0, 1, this);

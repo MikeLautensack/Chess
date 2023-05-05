@@ -2,13 +2,7 @@ package com.Game.Chess.Model.board;
 
 import java.util.HashMap;
 
-import com.Game.Chess.Model.piece.Bishop;
-import com.Game.Chess.Model.piece.King;
-import com.Game.Chess.Model.piece.Knight;
-import com.Game.Chess.Model.piece.Pawn;
-import com.Game.Chess.Model.piece.PieceColor;
-import com.Game.Chess.Model.piece.Queen;
-import com.Game.Chess.Model.piece.Rook;
+import com.Game.Chess.Model.piece.*;
 import com.Game.Chess.ResourceRepresentationClasses.BoardConfig;
 
 public class Board {
@@ -129,10 +123,96 @@ public class Board {
         }
     }
 
+    public Board() {
+        for (int i = 0; i < boardArray.length; i++) {
+
+            int fileIndex = 0;
+            SquareColor color = (i % 1 == 0) ? SquareColor.LIGHT : SquareColor.DARK;
+
+            for (int j = 0; j < fileArray.length; j++) {
+
+                // Build square
+                Square newSquare = new Square(color,
+                        new Coordinates(j, -i + 8, fileArray[j].toString().concat(String.valueOf(-i + 8))));
+
+                // Add square to board array
+                boardArray[i][fileIndex] = newSquare;
+
+                // Change square color
+                color = (color == SquareColor.DARK) ? SquareColor.LIGHT : SquareColor.DARK;
+
+                // Create map values
+                squareCoordinatesMap.put(
+                        new Coordinates(j, -i + 8, fileArray[j].toString().concat(String.valueOf(-i + 8))), newSquare);
+
+                // Increment file index
+                fileIndex++;
+            }
+        }
+    }
+
     public void printBoard() {
+        System.out.println("              Chess");
         for (Square[] rank : boardArray) {
             for (Square square : rank) {
-                System.out.println(square);
+                if (square.isOccupied() == true) {
+                    System.out.print("|");
+                    System.out.print(abbreviatePieceName(square.getPieceOnSquare().getId()));
+                    System.out.print("|");
+
+                } else {
+                    System.out.print("|");
+                    System.out.print("  ");
+                    System.out.print("|");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public String abbreviatePieceName(String pieceName) {
+        if (pieceName.contains("white")) {
+            if (pieceName.contains("Pawn")) {
+                return "WP";
+            } else if (pieceName.contains("Knight")) {
+                return "WN";
+            } else if (pieceName.contains("Bishop")) {
+                return "WB";
+            } else if (pieceName.contains("Rook")) {
+                return "WR";
+            } else if (pieceName.contains("Queen")) {
+                return "WQ";
+            } else if (pieceName.contains("King")) {
+                return "WK";
+            }
+        } else if (pieceName.contains("black")) {
+            if (pieceName.contains("Pawn")) {
+                return "BP";
+            } else if (pieceName.contains("Knight")) {
+                return "BN";
+            } else if (pieceName.contains("Bishop")) {
+                return "BB";
+            } else if (pieceName.contains("Rook")) {
+                return "BR";
+            } else if (pieceName.contains("Queen")) {
+                return "BQ";
+            } else if (pieceName.contains("King")) {
+                return "BK";
+            }
+        }
+        return "";
+    }
+
+    public void addPiece(Piece piece, String coordinate) {
+        Board board = this;
+        Square[][] arr = board.getBoardArray();
+        for (Square[] squareArr : arr) {
+            for (Square square : squareArr) {
+                if (square.getSquareCoordinate().getID().equals(coordinate)) {
+                    square.setPieceOnSquare(piece);
+                    square.setOccupied(true);
+                    piece.setSquare(square);
+                }
             }
         }
     }
