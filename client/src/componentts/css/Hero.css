@@ -1,0 +1,133 @@
+.hero {
+    background-image: url('../assets/HeroIMG.png');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+
+.hamburger-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    z-index: 200;
+}
+
+.navigation {
+    position: fixed;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 250ms ease-out;
+    z-index: 100;
+    width: 250px;
+    height: 100vh;
+    background-color: #3B311E;
+    color: white;
+}
+
+.navigation-open {
+    transform: translateX(0%);
+}
+
+.nav-box {
+    position: relative;
+    top: 8rem;
+    left: 3.5rem;
+}
+
+.link-box {
+    margin: 1.5rem 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-home {
+    
+}
+
+.nav-about {
+
+}
+
+.nav-demo {
+
+}
+
+.header {
+    display: none;
+}
+
+.header-heading {
+
+}
+
+.header-nav {
+
+}
+
+.header-nav-home {
+
+}
+
+.header-nav-about {
+
+}
+
+.header-nav-demo {
+
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    top: 172px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    line-height: 76px;
+    margin: 0;
+}
+
+.hero-content h6 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.hero-content-buttons {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.learn-more {
+    width: 50%;
+    margin-right: 10px;
+    border-radius: 100vw;
+    padding: 8px 0;
+    background-color: #87692A;
+    color: white;
+}
+
+.explore-demo {
+    width: 50%;
+    margin-left: 10px;
+    border-radius: 100vw;
+    padding: 8px 0;
+    background-color: #87692A;
+    color: white;
+}
+
+@media screen and (min-width: 600px) {
+    
+}

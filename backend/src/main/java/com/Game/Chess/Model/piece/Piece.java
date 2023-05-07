@@ -1,6 +1,5 @@
 package com.Game.Chess.Model.piece;
 
-import java.io.Console;
 import java.util.List;
 import java.util.Map;
 
