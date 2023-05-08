@@ -1,20 +1,102 @@
 .about {
-    background-color: aquamarine;
-    height: 100vh;
+    background-color: #1E293B;
+    display: flex;
 }
 
-.content {
+.about-grid-rows {
 
 }
 
 .content-left {
+    grid-column: span 4;
+}
 
+.content-left h1 {
+    font-size: 60px;
+    line-height: 76px;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin: 1rem 0 0 0;
+}
+
+.content-left h4 {
+    font-size: 32px;
+    line-height: 40px;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin: 0;
+    margin: 1rem 0;
+}
+
+.content-left  h5{
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin: 0;
+    margin: 1rem 0 0 0;
+}
+
+.content-left h6 {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin: 0;
+    margin: 1rem 0 0 0;
+}
+
+.content-left p {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+.content-right {
+    grid-column: span 4;
+}
+
+.content-right h4 {
+    font-size: 32px;
+    line-height: 40px;
+    color: white;
+    margin: 1rem 0 0 0;
+}
+
+.content-right h5 {
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+    margin: 0;
+}
+
+.content-right p {
+    font-size: 9px;
+    line-height: 16px;
+    color: white;
+    margin: 0 0 1rem 0;
 }
 
 .input-example {
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+    margin: .5rem 0 0 0;
+}
 
+.input-example img {
+    max-width: 100%;
 }
 
 .output-example {
-    
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+    margin: .5rem 0 0 0;
+}
+
+.output-example img {
+    max-width: 100%;
 }

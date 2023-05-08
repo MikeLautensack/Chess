@@ -5,85 +5,19 @@
     display: flex;
 }
 
-.hamburger-icon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    color: white;
-    z-index: 200;
-}
-
-.navigation {
-    position: fixed;
-    right: 0;
-    transform: translateX(100%);
-    transition: transform 250ms ease-out;
-    z-index: 100;
-    width: 250px;
-    height: 100vh;
-    background-color: #3B311E;
-    color: white;
-}
-
-.navigation-open {
-    transform: translateX(0%);
-}
-
-.nav-box {
-    position: relative;
-    top: 8rem;
-    left: 3.5rem;
-}
-
-.link-box {
-    margin: 1.5rem 0;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-}
-
-.nav-home {
-    
-}
-
-.nav-about {
-
-}
-
-.nav-demo {
-
+.hero-grid-rows {
+    grid-template-rows: fit-content(100%) fit-content(100%);
 }
 
 .header {
     display: none;
 }
 
-.header-heading {
-
-}
-
-.header-nav {
-
-}
-
-.header-nav-home {
-
-}
-
-.header-nav-about {
-
-}
-
-.header-nav-demo {
-
-}
-
 .hero-content {
     position: relative;
     color: white;
     top: 172px;
+    grid-column: span 4;
 }
 
 .hero-content h1 {
@@ -117,6 +51,7 @@
     padding: 8px 0;
     background-color: #87692A;
     color: white;
+    border: none;
 }
 
 .explore-demo {
@@ -126,8 +61,46 @@
     padding: 8px 0;
     background-color: #87692A;
     color: white;
+    border: none;
 }
 
 @media screen and (min-width: 600px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 4px solid white;
+        height: 3rem;
+    }
     
+    .header-heading {
+        font-size: 24px;
+        line-height: 32px;
+        color: white;
+        margin: 0;
+    }
+    
+    .header-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .header-nav-home {
+        font-size: 20px;
+        line-height: 24px;
+        color: white;     
+    }
+    
+    .header-nav-about {
+        font-size: 20px;
+        line-height: 24px;
+        color: white; 
+    }
+    
+    .header-nav-demo {
+        font-size: 20px;
+        line-height: 24px;
+        color: white;
+    }
 }

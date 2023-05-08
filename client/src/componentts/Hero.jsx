@@ -33,7 +33,7 @@ const Hero = () => {
         </nav>
 
         {/* Content */}
-        <div className='content'>
+        <div className='content hero-grid-rows'>
 
             {/* Header */}
             <header className='header'>
