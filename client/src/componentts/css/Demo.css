@@ -1,11 +1,21 @@
 .demo {
     background-color: #1E293B;
-    height: 100vh;
     display: flex;
+    height: 100vh;
 }
 
 .demo-grid-rows {
     grid-template-rows: fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%);
+}
+
+.demo-content-left {
+    grid-column: span 4;
+    height: 100%;
+}
+
+.demo-content-right {
+    grid-column: span 4;
+    height: 100%;
 }
 
 .demo-content-headings-h1 {
@@ -30,6 +40,7 @@
     display: flex;
     flex-direction: column;
     grid-column: span 4;
+    max-width: 500px;
 }
 
 .board-header {
@@ -92,4 +103,18 @@
     color: white;
     margin: 1rem 0;
     grid-column: span 4;
+}
+
+@media screen and (min-width: 600px) {
+    .demo  {
+        height: 100vh;
+    }
+
+    .demo-content-left {
+        grid-column: 1 / 8;
+    }
+    
+    .demo-content-right {
+        grid-column: 9 / 13;
+    }
 }

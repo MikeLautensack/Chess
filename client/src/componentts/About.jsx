@@ -12,7 +12,7 @@ const About = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <section className='about'>
+    <section className='about' id='about'>
 
       {/* Hamburger Icon */}
       <div onClick={handleClick} className='hamburger-icon'>
@@ -34,7 +34,7 @@ const About = () => {
             </div>
         </nav>
 
-      <div className='content about-grid-rows'>
+      <div className='content'>
 
         {/* Content Left */}
         <div className='content-left'>
@@ -48,8 +48,8 @@ const About = () => {
 
             Chess API helps you easily transform a simple frontend drag and drop chess application into a professional feeling online chess experience you would expect from the big name chess websites.
           </p>
-          <h5>API Access</h5>
-          <p>193.46.198.215:8080/getLegalMoves</p>
+          <h5 className='api-access'>API Access</h5>
+          <p className='api-endpoint'>193.46.198.215:8080/getLegalMoves</p>
         </div>
 
         {/* Content Right */}

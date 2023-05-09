@@ -68,5 +68,6 @@ code {
 
   .content {
     margin: 0 8rem;
+    grid-template-columns: repeat(12, 1fr);
   }
 }

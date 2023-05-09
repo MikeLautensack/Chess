@@ -10,7 +10,7 @@ const Demo = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <section className='demo'>
+    <section className='demo' id='demo'>
 
       {/* Hamburger Icon */}
       <div onClick={handleClick} className='hamburger-icon'>
@@ -35,106 +35,115 @@ const Demo = () => {
       {/* Content */}
       <div className='content demo-grid-rows'>
 
-        
-        <h1 className='demo-content-headings-h1'>Chess API In Action</h1>
-        <h5 className='demo-content-headings-h5'>Click and drag chess pieces to watch chess API in action</h5>
+        {/* Demo Content Left */}
+        <div className='demo-content-left'>
 
-        {/* Board Container */}
-        <div className='board-container'>
+          <h1 className='demo-content-headings-h1'>Chess API In Action</h1>
+          <h5 className='demo-content-headings-h5'>Click and drag chess pieces to watch chess API in action</h5>
 
-          {/* Board Header */}
-          <div className='board-header'>
-            <h4>White to Move!</h4>
-            <button>Reset Board</button>
+          {/* Board Container */}
+          <div className='board-container'>
+
+            {/* Board Header */}
+            <div className='board-header'>
+              <h4>White to Move!</h4>
+              <button>Reset Board</button>
+            </div>
+            {/* Board */}
+            <div className='board'>
+              <div className='rank'>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+              </div>
+              <div className='rank'>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+              </div>
+              <div className='rank'>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+              </div>
+              <div className='rank'>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+              </div>
+              <div className='rank'>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+              </div>
+              <div className='rank'>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+              </div>
+              <div className='rank'>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+              </div>
+              <div className='rank'>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+                <div className='square dark'></div>
+                <div className='square light'></div>
+              </div>
+            </div>
           </div>
-          {/* Board */}
-          <div className='board'>
-            <div className='rank'>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-            </div>
-            <div className='rank'>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-            </div>
-            <div className='rank'>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-            </div>
-            <div className='rank'>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-            </div>
-            <div className='rank'>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-            </div>
-            <div className='rank'>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-            </div>
-            <div className='rank'>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-            </div>
-            <div className='rank'>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-              <div className='square dark'></div>
-              <div className='square light'></div>
-            </div>
-          </div>
+
         </div>
-        
-        {/* API Response Display Area */}
-        <h6 className='legalmoves-heading'>Legal Moves</h6>
-        <div>
+
+        {/* Demo Content Right */}
+        <div className='demo-content-right'>
+
+          {/* API Response Display Area */}
+          <h6 className='legalmoves-heading'>Legal Moves</h6>
+          <div>
+
+          </div>
 
         </div>
 

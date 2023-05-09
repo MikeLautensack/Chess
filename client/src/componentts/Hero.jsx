@@ -10,7 +10,7 @@ const Hero = () => {
   const handleClick = () => setNav(!nav)
     
   return (
-    <section className='hero'>
+    <section className='hero' id='hero'>
 
         {/* Hamburger Icon */}
         <div onClick={handleClick} className='hamburger-icon'>
@@ -40,13 +40,13 @@ const Hero = () => {
                 <h3 className='header-heading'>Chess API</h3>
                 <nav className='header-nav'>
                     <div className='header-nav-home'>
-                        <Link to='/'>Home</Link>
+                        <a href='#hero' className='header-nav-button'>Home</a>
                     </div>
                     <div className='header-nav-about'>
-                        <Link to='/About'>About</Link>
+                        <a href='#about' className='header-nav-button'>About</a>
                     </div>
                     <div className='header-nav-demo'>
-                        <Link to='/Demo'>Demo</Link>
+                        <a href='#demo' className='header-nav-button'>Demo</a>
                     </div>
                 </nav>
             </header>
