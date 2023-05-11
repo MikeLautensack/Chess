@@ -6,7 +6,7 @@ import Demo from './componentts/Demo'
 
 function App() {
 
-  const isMobile = useMediaQuery({ maxWidth: 850 })
+  const isMobile = useMediaQuery({ maxWidth: 750 })
 
   if (isMobile) {
     return (
@@ -18,11 +18,11 @@ function App() {
     );
   } else {
     return (
-      <>
+      <div className='app'>
         <Hero />
         <About />
         <Demo />
-      </>
+      </div>
     );
   }
 }

@@ -52,6 +52,7 @@
     background-color: #87692A;
     color: white;
     border: none;
+    transition: 175ms ease-in-out;
 }
 
 .explore-demo {
@@ -62,6 +63,17 @@
     background-color: #87692A;
     color: white;
     border: none;
+    transition: 175ms ease-in-out;
+}
+
+.learn-more:hover {
+    scale: 1.05;
+    box-shadow: 0 0 .75rem #87692A;
+}
+
+.explore-demo:hover {
+    scale: 1.05;
+    box-shadow: 0 0 .75rem #87692A;
 }
 
 @media screen and (min-width: 600px) {
@@ -70,7 +82,7 @@
     }
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 750px) {
     .hero-content {
         grid-column: span 4;
     }
@@ -140,17 +152,5 @@
         grid-template-rows: 48px;
         grid-column: 10 / 13;
         height: 48px;
-    }
-
-    .header-nav-home {
-        
-    }
-    
-    .header-nav-about {
-        
-    }
-    
-    .header-nav-demo {
-       
     }
 }

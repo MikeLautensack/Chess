@@ -35,11 +35,12 @@ const Demo = () => {
       {/* Content */}
       <div className='content demo-grid-rows'>
 
-        {/* Demo Content Left */}
-        <div className='demo-content-left'>
+        <h1 className='demo-content-headings-h1'>Chess API In Action</h1>
+        <h5 className='demo-content-headings-h5'>Click and drag chess pieces to watch chess API in action</h5>
 
-          <h1 className='demo-content-headings-h1'>Chess API In Action</h1>
-          <h5 className='demo-content-headings-h5'>Click and drag chess pieces to watch chess API in action</h5>
+        <div className='bottom-content'>
+          {/* Demo Content Left */}
+          <div className='demo-content-left'>
 
           {/* Board Container */}
           <div className='board-container'>
@@ -134,10 +135,10 @@ const Demo = () => {
             </div>
           </div>
 
-        </div>
+          </div>
 
-        {/* Demo Content Right */}
-        <div className='demo-content-right'>
+          {/* Demo Content Right */}
+          <div className='demo-content-right'>
 
           {/* API Response Display Area */}
           <h6 className='legalmoves-heading'>Legal Moves</h6>
@@ -145,8 +146,9 @@ const Demo = () => {
 
           </div>
 
+          </div>
         </div>
-
+        
       </div>
     </section>
   )

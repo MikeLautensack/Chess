@@ -40,13 +40,13 @@ const Hero = () => {
                 <h3 className='header-heading'>Chess API</h3>
                 <nav className='header-nav'>
                     <div className='header-nav-home'>
-                        <a href='#hero' className='header-nav-button'>Home</a>
+                        <a className='header-nav-button'>Home</a>
                     </div>
                     <div className='header-nav-about'>
-                        <a href='#about' className='header-nav-button'>About</a>
+                        <a className='header-nav-button'>About</a>
                     </div>
                     <div className='header-nav-demo'>
-                        <a href='#demo' className='header-nav-button'>Demo</a>
+                        <a className='header-nav-button'>Demo</a>
                     </div>
                 </nav>
             </header>

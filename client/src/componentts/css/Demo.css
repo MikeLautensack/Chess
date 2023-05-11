@@ -2,6 +2,7 @@
     background-color: #1E293B;
     display: flex;
     height: 100vh;
+    overflow-y: scroll;
 }
 
 .demo-grid-rows {
@@ -10,7 +11,6 @@
 
 .demo-content-left {
     grid-column: span 4;
-    height: 100%;
 }
 
 .demo-content-right {
@@ -40,6 +40,8 @@
     display: flex;
     flex-direction: column;
     grid-column: span 4;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .board-header {
@@ -67,6 +69,12 @@
     width: 50%;
     margin: 0 16px 0 10px;
     padding: 4px 0;
+    transition: 175ms ease-in-out;
+}
+
+.board-header button:hover {
+    scale: 1.05;
+    box-shadow: 0 0 .75rem #87692A;
 }
 
 .board {
@@ -104,7 +112,18 @@
     grid-column: span 4;
 }
 
+.bottom-content {
+    grid-column: span 4;
+}
+
 @media screen and (min-width: 600px) {
+    .bottom-content {
+        grid-column: span 8;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0 20px;
+    }
+
     .demo-content-left {
         grid-column: span 8;
     }
@@ -115,67 +134,68 @@
 
     .board-container {
         max-width: 400px;
-    }
-}
-
-@media screen and (min-width: 850px) {
-    .demo-content-left {
-        grid-column: span 8;
-    }
-    
-    .demo-content-right {
-        grid-column: span 8;
+        margin: 0 auto;
     }
 
     .demo-content-headings-h1 {
-        font-size: 60px;
-        line-height: 76px;
-        color: white;
-        margin: 0;
-        grid-column: span 4;
+        grid-column: span 8;
     }
     
     .demo-content-headings-h5 {
-        font-size: 16px;
-        line-height: 20px;
-        color: white;
-        margin: 1rem 0;
+        grid-column: span 8;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .board-container {
+        grid-column: 1 / 5;
+        max-width: 400px;
+        margin: 0;
+    }
+
+    .demo-content-left {
         grid-column: span 4;
+    }
+    
+    .demo-content-right {
+        grid-column: 5 / 9;
+    }
+
+    .legalmoves-heading {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .demo-content-headings-h1 {
+        grid-column: span 8;
+    }
+    
+    .demo-content-headings-h5 {
+        grid-column: span 8;
     }
 
     .board-container {
-        max-width: 800px;
-        margin: 0 auto;
+        max-width: 500px;
+        margin: 0;
     }
 }
 
 @media screen and (min-width: 1200px) {
+    .bottom-content {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column: span 12;
+    }
+
     .demo-content-left {
-        grid-column: 1 / 8;
+        grid-column: 1 / 7;
     }
     
     .demo-content-right {
-        grid-column: 9 / 13;
-    }
-
-    .demo-content-headings-h1 {
-        font-size: 60px;
-        line-height: 76px;
-        color: white;
-        margin: 0;
-        grid-column: span 4;
-    }
-    
-    .demo-content-headings-h5 {
-        font-size: 16px;
-        line-height: 20px;
-        color: white;
-        margin: 1rem 0;
-        grid-column: span 4;
+        grid-column: 8 / 13;
     }
 
     .board-container {
-        max-width: 800px;
-        margin: 0 auto;
+        margin: 0;
     }
 }
