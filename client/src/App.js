@@ -6,7 +6,7 @@ import Demo from './componentts/Demo'
 
 function App() {
 
-  const isMobile = useMediaQuery({ maxWidth: 768 })
+  const isMobile = useMediaQuery({ maxWidth: 850 })
 
   if (isMobile) {
     return (

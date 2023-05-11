@@ -62,12 +62,22 @@ code {
 }
 
 @media screen and (min-width: 600px) {
+  .content {
+    margin: 0 4rem;
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media screen and (min-width: 850px) {
   .hamburger-icon {
     display: none;
   }
+}
 
+@media screen and (min-width: 1200px) {
   .content {
     margin: 0 8rem;
     grid-template-columns: repeat(12, 1fr);
+    height: 100vh;
   }
 }

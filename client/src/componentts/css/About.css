@@ -5,9 +5,10 @@
 
 .content-left {
     grid-column: span 4;
+    position: relative;
 }
 
-.content-left h1 {
+.content-left-h1 {
     font-size: 60px;
     line-height: 76px;
     font-family: 'DM Sans', sans-serif;
@@ -15,7 +16,7 @@
     margin: 1rem 0 0 0;
 }
 
-.content-left h4 {
+.content-left-h4 {
     font-size: 32px;
     line-height: 40px;
     font-family: 'DM Sans', sans-serif;
@@ -24,7 +25,7 @@
     margin: 1rem 0;
 }
 
-.content-left  h5{
+.content-left-h5{
     font-size: 20px;
     line-height: 24px;
     font-family: 'DM Sans', sans-serif;
@@ -33,7 +34,7 @@
     margin: 1rem 0 0 0;
 }
 
-.content-left h6 {
+.content-left-h6 {
     font-size: 16px;
     line-height: 20px;
     font-family: 'DM Sans', sans-serif;
@@ -42,7 +43,23 @@
     margin: 1rem 0 0 0;
 }
 
-.content-left p {
+.top {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+.middle {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin: 1rem 0;
+}
+
+.bottom {
     font-size: 12px;
     line-height: 16px;
     font-family: 'DM Sans', sans-serif;
@@ -68,15 +85,23 @@
     margin: 0;
 }
 
-.content-right p {
+.input-example-subheading {
     font-size: 9px;
     line-height: 16px;
     color: white;
-    margin: 0 0 1rem 0;
+    margin: 0;
+}
+
+.output-example-subheading {
+    font-size: 9px;
+    line-height: 16px;
+    color: white;
+    margin: 0;
 }
 
 .input-example {
     width: 100%;
+    max-width: 550px;
     height: calc(50vh - 94px);
     overflow-y: scroll;
     margin: .5rem 0 0 0;
@@ -88,6 +113,7 @@
 
 .output-example {
     width: 100%;
+    max-width: 550px;
     height: calc(50vh - 94px);
     overflow-y: scroll;
     margin: .5rem 0 0 0;
@@ -97,27 +123,85 @@
     max-width: 100%;
 }
 
+.api-endpoint {
+    position: relative;
+    bottom: 0;
+    color: white;
+    margin: 0;
+    font-size: 9px;
+    line-height: 16px;
+}
+
+.api-access {
+    position: relative;
+    bottom: 0;
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 2rem 0 0 0;
+}
+
 @media screen and (min-width: 600px) {
+    .content-left {
+        grid-column: span 8;
+    }
+
+    .content-right {
+        grid-column: span 8;
+    }
+
+    .example-box {
+        display: flex;
+    }
+
+    .content-right-input {
+        width: 50%;
+        margin-right: 1rem;
+    }
+    
+    .content-right-output {
+        width: 50%;
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
     .about {
         height: 100vh;
     }
 
+    .example-box {
+        display: unset
+    }
+
     .content-left {
         grid-column: 1 / 8;
-        position: relative;
     }
 
     .content-right {
         grid-column: 9 / 13;
     }
 
+    .content-right-input {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .content-right-output {
+        width: 100%;
+        margin: 0;
+    }
+
     .api-access {
         position: absolute;
-        bottom: 2rem;
+        bottom: 1rem;
     }
 
     .api-endpoint {
         position: absolute;
-        bottom: 1rem;
+    }
+
+    .input-example-subheading {
+        margin: 0 0 1rem 0;
     }
 }
