@@ -116,6 +116,145 @@
     grid-column: span 4;
 }
 
+.whiteKing,
+.whiteQueen,
+.whiteARook,
+.whiteHRook,
+.whiteCBishop,
+.whiteFBishop,
+.whiteBKnight,
+.whiteGKnight,
+.whiteAPawn,
+.whiteBPawn,
+.whiteCPawn,
+.whiteDPawn,
+.whiteEPawn,
+.whiteFPawn,
+.whiteGPawn,
+.whiteHPawn,
+.blackKing,
+.blackQueen,
+.blackARook,
+.blackHRook,
+.blackCBishop,
+.blackFBishop,
+.blackBKnight,
+.blackGKnight,
+.blackAPawn ,
+.blackBPawn ,
+.blackCPawn ,
+.blackDPawn ,
+.blackEPawn ,
+.blackFPawn ,
+.blackGPawn ,
+.blackHPawn            {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+}
+
+.whiteKing {
+    background-image: url(../assets/wK.svg);
+}
+.whiteQueen {
+    background-image: url(../assets/wQ.svg);
+}
+.whiteARook {
+    background-image: url(../assets/wR.svg);
+}
+.whiteHRook {
+    background-image: url(../assets/wR.svg);
+}
+.whiteCBishop {
+    background-image: url(../assets/wB.svg);
+}
+.whiteFBishop {
+    background-image: url(../assets/wB.svg);
+}
+.whiteBKnight {
+    background-image: url(../assets/wN.svg);
+}
+.whiteGKnight {
+    background-image: url(../assets/wN.svg);
+}
+.whiteAPawn {
+    background-image: url(../assets/wP.svg);
+}
+.whiteBPawn {
+    background-image: url(../assets/wP.svg);
+}
+.whiteCPawn {
+    background-image: url(../assets/wP.svg);
+}
+.whiteDPawn {
+    background-image: url(../assets/wP.svg);
+}
+.whiteEPawn {
+    background-image: url(../assets/wP.svg);
+}
+.whiteFPawn {
+    background-image: url(../assets/wP.svg);
+}
+.whiteGPawn {
+    background-image: url(../assets/wP.svg);
+}
+.whiteHPawn {
+    background-image: url(../assets/wP.svg);
+}
+.blackKing {
+    background-image: url(../assets/bK.svg);
+}
+.blackQueen {
+    background-image: url(../assets/bQ.svg);
+}
+.blackARook {
+    background-image: url(../assets/bR.svg);
+}
+.blackHRook {
+    background-image: url(../assets/bR.svg);
+}
+.blackCBishop {
+    background-image: url(../assets/bB.svg);
+}
+.blackFBishop {
+    background-image: url(../assets/bB.svg);
+}
+.blackBKnight {
+    background-image: url(../assets/bN.svg);
+}
+.blackGKnight {
+    background-image: url(../assets/bN.svg);
+}
+.blackAPawn {
+    background-image: url(../assets/bP.svg);
+}
+.blackBPawn {
+    background-image: url(../assets/bP.svg);
+}
+.blackCPawn {
+    background-image: url(../assets/bP.svg);
+}
+.blackDPawn {
+    background-image: url(../assets/bP.svg);
+}
+.blackEPawn {
+    background-image: url(../assets/bP.svg);
+}
+.blackFPawn {
+    background-image: url(../assets/bP.svg);
+}
+.blackGPawn {
+    background-image: url(../assets/bP.svg);
+}
+.blackHPawn {
+    background-image: url(../assets/bP.svg);
+} 
+
+
+
+
 @media screen and (min-width: 600px) {
     .bottom-content {
         grid-column: span 8;
