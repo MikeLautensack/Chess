@@ -252,7 +252,9 @@
     background-image: url(../assets/bP.svg);
 } 
 
-
+.transparent {
+    background-color: transparent;
+}
 
 
 @media screen and (min-width: 600px) {
