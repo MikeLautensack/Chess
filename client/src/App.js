@@ -3,10 +3,20 @@ import { Route, Routes} from 'react-router-dom'
 import Hero from './componentts/Hero'
 import About from './componentts/About'
 import Demo from './componentts/Demo'
+import { scroller } from 'react-scroll'
 
 function App() {
 
   const isMobile = useMediaQuery({ maxWidth: 750 })
+
+  const scrollToComponent = (componentName) => {
+    scroller.scrollTo(componentName, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    })
+  }
+  
 
   if (isMobile) {
     return (
@@ -19,9 +29,9 @@ function App() {
   } else {
     return (
       <div className='app'>
-        <Hero />
-        <About />
-        <Demo />
+        <Hero id='hero' scrollToComponent={scrollToComponent} />
+        <About id='about'/>
+        <Demo id='demo'/>
       </div>
     );
   }

@@ -40,7 +40,7 @@ const Square = ({ className,
         setBoardConfig(newBoardConfig)
         const callAPI = async () => {
           try {
-            const response = await axios.post('http://localhost:8080/boardConfig');
+            const response = await axios.post('http://localhost:8080/boardConfig', boardConfig);
             setLegalMoves(response.data)
             console.log(response.data, 'API call succsessful')
           } catch (error) {

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-const Hero = () => {
+const Hero = ({ scrollToComponent }) => {
 
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
@@ -40,13 +40,13 @@ const Hero = () => {
                 <h3 className='header-heading'>Chess API</h3>
                 <nav className='header-nav'>
                     <div className='header-nav-home'>
-                        <a className='header-nav-button'>Home</a>
+                        <a onClick={() => scrollToComponent('hero')} className='header-nav-button'>Home</a>
                     </div>
                     <div className='header-nav-about'>
-                        <a className='header-nav-button'>About</a>
+                        <a onClick={() => scrollToComponent('about')} className='header-nav-button'>About</a>
                     </div>
                     <div className='header-nav-demo'>
-                        <a className='header-nav-button'>Demo</a>
+                        <a onClick={() => scrollToComponent('demo')} className='header-nav-button'>Demo</a>
                     </div>
                 </nav>
             </header>
@@ -57,8 +57,8 @@ const Hero = () => {
                 <h1>Chess API</h1>
                 <p>Chess API generates legal moves for each piece in any position with simple JSON Object Input and Output</p>
                 <div className='hero-content-buttons'>
-                    <button className='learn-more'><Link to='/About' className='nav-link'>Learn More</Link></button>
-                    <button className='explore-demo'><Link to='/Demo' className='nav-link'>Explore Demo</Link></button>
+                    <button onClick={() => scrollToComponent('about')} className='learn-more'>Learn More</button>
+                    <button onClick={() => scrollToComponent('demo')} className='explore-demo'>Explore Demo</button>
                 </div>
             </div>
 

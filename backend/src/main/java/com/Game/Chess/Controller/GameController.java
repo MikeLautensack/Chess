@@ -2,6 +2,7 @@ package com.Game.Chess.Controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import com.Game.Chess.ResourceRepresentationClasses.LegalMoves;
 public class GameController {
 
     @PostMapping(path = "/boardConfig")
+    @CrossOrigin("*")
     public ResponseEntity<LegalMoves> boardConfig(@RequestBody BoardConfig boardConfig) {
 
         LegalMoves legalMoves = GenerateLegalMoves.generateLegalMoves(boardConfig);

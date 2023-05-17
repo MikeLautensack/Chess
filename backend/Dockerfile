@@ -1,15 +1,9 @@
-FROM node:19
+FROM openjdk:19-alpine
 
-WORKDIR /app/
+WORKDIR /app
 
-COPY package*.json .
-
-RUN npm i
-
-COPY . ./
-
-RUN npm run build
+COPY target/Chess-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD ["java", "-jar", "Chess-0.0.1-SNAPSHOT.jar"]

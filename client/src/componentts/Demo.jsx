@@ -221,7 +221,79 @@ const Demo = () => {
         'h1' : 'whiteHRook',
       }
     )
+    setLegalMoves(
+      {
+        'blackAPawn' : ['a5','a6'],
+        'blackARook' : [],
+        'blackBKnight' : ['a6','c6'],
+        'blackBPawn' : ['b5','b6'],
+        'blackCBishop' : [],
+        'blackCPawn' : ['c5','c6'],
+        'blackDPawn' : ['d5','d6'],
+        'blackEPawn' : ['e5','e6'],
+        'blackFBishop' : [],    
+        'blackFPawn' : ['f5','f6'],
+        'blackGKnight' : ['f6','h6'],
+        'blackGPawn' : ['g5','g6'],
+        'blackHPawn' : ['h5','h6'],
+        'blackHRook' : [],
+        'blackKing' : [],
+        'blackQueen' : [],
+        'promotionBishopA' : [],
+        'promotionBishopB' : [],
+        'promotionBishopC' : [],
+        'promotionBishopD' : [],
+        'promotionBishopE' : [],
+        'promotionBishopF' : [],
+        'promotionBishopG' : [],
+        'promotionBishopH' : [],
+        'promotionKnightA' : [],    
+        'promotionKnightB' : [],
+        'promotionKnightC' : [],
+        'promotionKnightD' : [],
+        'promotionKnightE' : [],    
+        'promotionKnightF' : [],
+        'promotionKnightG' : [],
+        'promotionKnightH' : [],
+        'promotionQueenA' : [],
+        'promotionQueenB' : [],
+        'promotionQueenC' : [],
+        'promotionQueenD' : [],
+        'promotionQueenE' : [],
+        'promotionQueenF' : [],
+        'promotionQueenG' : [],
+        'promotionQueenH' : [],
+        'promotionRookA' : [],    
+        'promotionRookB' : [],
+        'promotionRookC' : [],
+        'promotionRookD' : [],
+        'promotionRookE' : [],
+        'promotionRookF' : [],
+        'promotionRookG' : [],
+        'promotionRookH' : [],
+        'whiteAPawn' : ['a3','a4'],
+        'whiteARook' : [],
+        'whiteBKnight' : ['a3','c3'],
+        'whiteBPawn' : ['b3','b4'],
+        'whiteCBishop' : [],
+        'whiteCPawn' : ['c3','c4'],
+        'whiteDPawn' : ['d3','d4'],
+        'whiteEPawn' : ['e3','e4'],
+        'whiteFBishop' : [],    
+        'whiteFPawn' : ['f3','f4'],
+        'whiteGKnight' : ['f3','h3'],
+        'whiteGPawn' : ['g3','g4'],
+        'whiteHPawn' : ['h3','h4'],    
+        'whiteHRook' : [],
+        'whiteKing' : [],
+        'whiteQueen' : [],
+      }
+    )
     setIsWhitesTurn(true)
+  }
+
+  const makeString = (arr) => {
+    return arr.join(' ')
   }
 
   return (
@@ -355,11 +427,44 @@ const Demo = () => {
           {/* Demo Content Right */}
           <div className='demo-content-right'>
 
-          {/* API Response Display Area */}
-          <h6 className='legalmoves-heading'>Legal Moves</h6>
-          <div>
-
-          </div>
+            {/* API Response Display Area */}
+            <h6 className='legalmoves-heading'>Legal Moves</h6>
+            
+              <div className='moves-box'>
+                <p className='legalmoves'>White King: {makeString(legalMoves.whiteKing)}</p>
+                <p className='legalmoves'>White Queen: {makeString(legalMoves.whiteQueen)}</p>
+                <p className='legalmoves'>White A-Rook: {makeString(legalMoves.whiteARook)}</p>
+                <p className='legalmoves'>White H-Rook: {makeString(legalMoves.whiteHRook)}</p>
+                <p className='legalmoves'>White C-Bishop: {makeString(legalMoves.whiteCBishop)}</p>
+                <p className='legalmoves'>White F-Bishop: {makeString(legalMoves.whiteFBishop)}</p>
+                <p className='legalmoves'>White B-Knight: {makeString(legalMoves.whiteBKnight)}</p>
+                <p className='legalmoves'>White G-Knight: {makeString(legalMoves.whiteGKnight)}</p>
+                <p className='legalmoves'>White A-Pawn: {makeString(legalMoves.whiteAPawn)}</p>
+                <p className='legalmoves'>White B-Pawn: {makeString(legalMoves.whiteBPawn)}</p>
+                <p className='legalmoves'>White C-Pawn: {makeString(legalMoves.whiteCPawn)}</p>
+                <p className='legalmoves'>White D-Pawn: {makeString(legalMoves.whiteDPawn)}</p>
+                <p className='legalmoves'>White E-Pawn: {makeString(legalMoves.whiteEPawn)}</p>
+                <p className='legalmoves'>white F-Pawn: {makeString(legalMoves.whiteFPawn)}</p>
+                <p className='legalmoves'>white G-Pawn: {makeString(legalMoves.whiteGPawn)}</p>
+                <p className='legalmoves'>white H-Pawn: {makeString(legalMoves.whiteHPawn)}</p>
+                <p className='legalmoves'>Black King: {makeString(legalMoves.blackKing)}</p>
+                <p className='legalmoves'>Black Queen: {makeString(legalMoves.blackQueen)}</p>
+                <p className='legalmoves'>Black A-Rook: {makeString(legalMoves.blackARook)}</p>
+                <p className='legalmoves'>Black H-Rook: {makeString(legalMoves.blackHRook)}</p>
+                <p className='legalmoves'>Black C-Bishop: {makeString(legalMoves.blackCBishop)}</p>
+                <p className='legalmoves'>Black F-Bishop: {makeString(legalMoves.blackFBishop)}</p>
+                <p className='legalmoves'>Black B-Knight: {makeString(legalMoves.blackBKnight)}</p>
+                <p className='legalmoves'>Black G-Knight: {makeString(legalMoves.blackGKnight)}</p>
+                <p className='legalmoves'>Black A-Pawn: {makeString(legalMoves.blackAPawn)}</p>
+                <p className='legalmoves'>Black B-Pawn: {makeString(legalMoves.blackBPawn)}</p>
+                <p className='legalmoves'>Black C-Pawn: {makeString(legalMoves.blackCPawn)}</p>
+                <p className='legalmoves'>Black D-Pawn: {makeString(legalMoves.blackDPawn)}</p>
+                <p className='legalmoves'>Black E-Pawn: {makeString(legalMoves.blackEPawn)}</p>
+                <p className='legalmoves'>Black F-Pawn: {makeString(legalMoves.blackFPawn)}</p>
+                <p className='legalmoves'>Black G-Pawn: {makeString(legalMoves.blackGPawn)}</p>
+                <p className='legalmoves'>Black H-Pawn: {makeString(legalMoves.blackHPawn)}</p>
+              </div>
+            
 
           </div>
         </div>
