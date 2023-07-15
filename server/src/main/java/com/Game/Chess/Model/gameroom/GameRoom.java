@@ -9,14 +9,16 @@ public class GameRoom {
 
     private String roomName;
     private String roomPassword;
+    private GameRoomConnectionType connection;
     private GameRoomAccess access;
     private int gameRoomID;
     private ArrayList<User> users = new ArrayList<>();
     private ArrayList<Game> games = new ArrayList<>();
 
-    public GameRoom(String roomName, String roomPassword, GameRoomAccess access, int gameRoomID) {
+    public GameRoom(String roomName, String roomPassword, GameRoomConnectionType connection, GameRoomAccess access, int gameRoomID) {
         this.roomName = roomName;
         this.roomPassword = roomPassword;
+        this.connection = connection;
         this.access = access;
         this.gameRoomID = gameRoomID;
     }
@@ -35,6 +37,14 @@ public class GameRoom {
 
     public void setRoomPassword(String roomPassword) {
         this.roomPassword = roomPassword;
+    }
+
+    public GameRoomConnectionType getConnection() {
+        return connection;
+    }
+
+    public void setConnection(GameRoomConnectionType connection) {
+        this.connection = connection;
     }
 
     public GameRoomAccess getAccess() {
@@ -68,5 +78,7 @@ public class GameRoom {
     public void setGames(ArrayList<Game> games) {
         this.games = games;
     }
+
+    
 
 }
