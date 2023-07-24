@@ -1,4 +1,6 @@
 export interface ButtonStyles {
+    width?: string,
+    height?: string,
     color?: string,
     bgcolor?: string,
     margin?: string,
