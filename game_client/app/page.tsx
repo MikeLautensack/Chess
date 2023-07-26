@@ -11,23 +11,15 @@ export default function Home() {
         <p className='text-base text-[#F8FAFC] my-4'>A simple chess app</p>
         <div className='flex justify-start gap-2'>
           <Button
-              buttonStyles={{
-                bgcolor: 'blue',
-                color: 'white',
-                padding: '.5rem',
-                fontWeight: '500'
-              }}>
-              Sign Up
-            </Button>
-            <Button
-              buttonStyles={{
-                bgcolor: 'white',
-                color: 'blue',
-                padding: '.5rem',
-                fontWeight: '500'
-              }}>
-              Log In
-            </Button>
+            className='bg-blue-500 text-white p-2'
+          >
+            Sign Up
+          </Button>
+          <Button
+            className='bg-white text-blue-500 p-2'
+          >
+            Log In
+          </Button>
         </div>
       </div>
     </main>

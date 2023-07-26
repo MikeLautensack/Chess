@@ -7,28 +7,19 @@ export default function TopNav() {
         <div>
 
         </div>
-        <div className='flex flex-col items-start w-full p-20'>
+        <div className='flex flex-col items-start w-full pt-20 pl-20'>
             <Button
-                buttonStyles={{
-                    color: '#F9FAFB',
-                    margin: '.5rem 0'
-                }}
+                className='text-white'
             >
                 Dashboard
             </Button>
             <Button
-                buttonStyles={{
-                    color: '#F9FAFB',
-                    margin: '.5rem 0'
-                }}
+                className='text-white my-2'
             >
                 Friends
             </Button>
             <Button
-                buttonStyles={{
-                    color: '#F9FAFB',
-                    margin: '.5rem 0'
-                }}
+                className='text-white'
             >
                 Game Rooms
             </Button>

@@ -1,17 +1,3 @@
-export interface ButtonStyles {
-    width?: string,
-    height?: string,
-    color?: string,
-    bgcolor?: string,
-    margin?: string,
-    padding?: string,
-    border?: string,
-    borderRadius?: string,
-    fontSize?: string,
-    fontWeight?: string,
-}
-
-export interface ButtonProps {
-    buttonStyles: ButtonStyles 
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> { 
     children?: string | JSX.Element | JSX.Element[]
 }  
