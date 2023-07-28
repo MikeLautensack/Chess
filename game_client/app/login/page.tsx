@@ -16,13 +16,7 @@ export default function Login() {
             </div>
             <div className='flex justify-center'>
                 <Button
-                    buttonStyles={{
-                        bgcolor: 'blue',
-                        color: 'white',
-                        fontWeight: '500',
-                        margin: '1rem 0',
-                        padding: '.5rem'
-                    }}
+                    
                 >
                     Log In
                 </Button>
