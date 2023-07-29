@@ -3,8 +3,11 @@
 import React from 'react'
 import { SquareColor } from '../utils/enums'
 import { useState } from 'react'
+import Square from './Square'
+import Piece from './Piece'
+import { BoardProps } from '../types/types'
 
-const Board = () => {
+const Board = ({ boardConfig }: BoardProps) => {
 
     const [ board, setBoard ] = useState([
         [{ square_id: 'a8', squareColor: SquareColor.LIGHT, pieceOnSquare: {}},{ square_id: 'b8', squareColor: SquareColor.DARK, pieceOnSquare: {}},{ square_id: 'c8', squareColor: SquareColor.LIGHT, pieceOnSquare: {}},{ square_id: 'd8', squareColor: SquareColor.DARK, pieceOnSquare: {}},{ square_id: 'e8', squareColor: SquareColor.LIGHT, pieceOnSquare: {}},{ square_id: 'f8', squareColor: SquareColor.DARK, pieceOnSquare: {}},{ square_id: 'g8', squareColor: SquareColor.LIGHT, pieceOnSquare: {}},{ square_id: 'h8', squareColor: SquareColor.DARK, pieceOnSquare: {}}],
@@ -18,9 +21,23 @@ const Board = () => {
     ])
 
     return (
-      <div id="board" className="">
-        <div id="squares">
-            {}
+      <div id="board" className='bg-yellow-900 w-[55%]'>
+        <div id="squares" className='grid grid-cols-8 m-4'>
+            {
+              board.map((rank) => (
+                rank.map((square) => (
+                  <Square
+                    square_id={square.square_id}
+                    squareColor={square.squareColor}
+                    pieceOnSquare={square.pieceOnSquare}
+                  >
+                    <Piece 
+                      pieceOnSquare={square.pieceOnSquare}
+                    />
+                  </Square>
+                ))
+              ))
+            }
         </div>
       </div>
     )

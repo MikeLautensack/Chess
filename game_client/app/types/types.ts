@@ -14,15 +14,28 @@ export interface TitleBarProps {
 }
 
 export interface Square {
-    
-}
 
-export interface Piece {
-    
 }
 
 export interface SquareProps {
     square_id: string,
     squareColor: SquareColor,
     pieceOnSquare: null | undefined | Piece
+    children?: string | JSX.Element | JSX.Element[]
+}
+
+export interface Piece {
+    
+}
+
+export interface PieceProps {
+    pieceOnSquare: Piece
+}
+
+export interface Board {
+
+}
+
+export interface BoardProps {
+    boardConfig?: Board
 }
