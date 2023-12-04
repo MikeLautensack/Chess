@@ -1,7 +1,5 @@
-import Button from '../components/Button'
 import GameData from '../components/GameData'
 import Chat from '../components/Chat'
-import SideNav from '../components/SideNav'
 import Board from '../components/Board'
 import GameNotation from '../components/GameNotation'
 
