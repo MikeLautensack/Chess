@@ -1,0 +1,321 @@
+/***************/
+/*****Reset*****/
+/***************/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**************************/
+/*****Custom Propeties*****/
+/**************************/
+
+/*****Colors*****/
+
+root {
+    --black: black;
+    --white: white;
+    --primary-blue: #004F88; 
+}
+
+
+/*****Fonts*****/
+
+root {
+    --primary: font-family: 'Montserrat', sans-serif;
+}
+
+/*************************/
+/*****Utility Classes*****/
+/*************************/
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.light {
+    background-image: url(assets/light-square.jpg);
+    background-size: cover;
+}
+
+.dark {
+    background-image: url(assets/dark-square.jpg);
+    background-size: cover;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+/****************/
+/*****Styles*****/
+/****************/
+
+/*****General Styles*****/
+
+
+html {
+    background-color: #2f3d4c;
+}
+
+body {
+
+}
+
+/*****Heading*****/
+
+.heading {
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-bar {
+    width: 90%;
+    max-width: 30rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container {
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mid {
+    width: 34%;
+    justify-content: center;
+    align-items: center;
+}
+
+.set-board-button {
+    color: green;
+    border: 1px solid green;
+    border-radius: .125rem;
+    background-color: transparent;
+    padding: .124rem .5rem;
+}
+
+h1 {
+    text-align: center;
+    color: #839daf;
+}
+
+.play-button {
+    color: green;
+    border: 1px solid green;
+    border-radius: .125rem;
+    background-color: transparent;
+    padding: .124rem .5rem;
+}
+
+/*****Table*****/
+
+.table {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*****Board*****/
+
+.board {
+    width: 90%;
+    max-width: 30rem;
+    aspect-ratio: 1;
+}
+
+.eighth-rank,
+.seventh-rank,
+.sixth-rank,
+.fifth-rank,
+.fourth-rank,
+.third-rank,
+.second-rank,
+.first-rank {
+    width: 100%;
+    height: 12.5%;
+}
+
+.square {
+    width: 12.5%;
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+/*****Controls*****/
+
+.controls {
+    justify-content: center;
+    align-items: center;
+}
+
+/*****Pieces*****/
+
+.pieces {
+    width: 90%;
+    max-width: 30rem;
+    height: 80%;
+}
+
+.piece {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.white,
+.black {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-king,
+.white-queen,
+.white-rook,
+.white-bishop,
+.white-knight,
+.white-pawn,
+.black-king,
+.black-queen,
+.black-rook,
+.black-bishop,
+.black-knight,
+.black-pawn {
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+}
+
+.white-king {
+    background-image: url(assets/wK.svg);
+}
+
+.white-queen {
+    background-image: url(assets/wQ.svg);
+}
+
+.white-rook {
+    background-image: url(assets/wR.svg);
+}
+
+.white-bishop {
+    background-image: url(assets/wB.svg);
+}
+
+.white-knight {
+    background-image: url(assets/wN.svg);
+}
+
+.white-knight {
+    background-image: url(assets/wN.svg);
+}
+
+.white-pawn {
+    background-image: url(assets/wP.svg);
+}
+
+.black-king {
+    background-image: url(assets/bK.svg);
+}
+
+.black-queen {
+    background-image: url(assets/bQ.svg);
+}
+
+.black-rook {
+    background-image: url(assets/bR.svg);
+}
+
+.black-bishop {
+    background-image: url(assets/bB.svg);
+}
+
+.black-knight {
+    background-image: url(assets/bN.svg);
+}
+
+.black-pawn {
+    background-image: url(assets/bP.svg);
+}
