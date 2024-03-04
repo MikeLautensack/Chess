@@ -9,7 +9,7 @@ export default defineConfig({
   out: "./src/db/drizzle",
   driver: "pg",
   dbCredentials: {
-    connectionString: process.env.POSTGRES_URL!,
+    connectionString: process.env.NEON_DB!,
   },
   verbose: true,
   strict: true,

@@ -1,10 +1,14 @@
+import SignUp from "@/components/forms/SignUp";
+import { Box, Container } from "@mui/material";
 import React from "react";
 
 const Page = () => {
   return (
-    <div>
-      Sign Up
-    </div>
+    <Container>
+      <Box>
+        <SignUp />        
+      </Box>
+    </Container>
   );
 }
 
