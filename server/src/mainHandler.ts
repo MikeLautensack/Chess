@@ -1,4 +1,3 @@
 export const mainHandler = (socket: any) => {
-  console.log(`${socket.data.username} has connected to the main namespace`);
-  console.log(`${socket.data.username} has this data ${socket.data}`);
+  console.log(`Socket: ${socket.id}, has connected to the main namespace`);
 };
