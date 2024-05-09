@@ -6,6 +6,7 @@ export const lobbyHandler = (socket: any) => {
     try {
       socket.join(lobby);
       console.log(`Socket: ${socket.id}, created lobby: ${lobby}`);
+      socket.emit("lobbyCreated", lobby);
     } catch (error) {
       console.log("Error creating lobby", error);
     }

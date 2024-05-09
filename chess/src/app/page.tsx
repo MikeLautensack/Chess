@@ -6,8 +6,7 @@ const Home = () => {
   return (
     <Container maxWidth="xl" sx={containerStyles}>
       <Typography>Home</Typography>
-      <Link href="/sign-in">Sign In</Link>
-      <Link href="/sign-up">Sign Up</Link>
+      <Link href="/sign-in">Sign In</Link>w<Link href="/sign-up">Sign Up</Link>
     </Container>
   );
 };

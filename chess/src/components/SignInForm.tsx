@@ -1,11 +1,14 @@
+"use client";
+
 import React from "react";
 import { Box, TextField, InputLabel, Button } from "@mui/material";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { signIn } from "next-auth/react";
 
 const SignInFormSchema = z.object({
-  input: z.string(),
+  gmail: z.string(),
 });
 
 type SignInFormValues = z.infer<typeof SignInFormSchema>;
@@ -17,32 +20,30 @@ const SignInForm = () => {
     formState: { errors },
   } = useForm<SignInFormValues>({
     resolver: zodResolver(SignInFormSchema),
-    defaultValues: { input: "" },
+    defaultValues: { gmail: "" },
   });
 
-  const onSubmit: SubmitHandler<SignInFormValues> = (
-    formData: SignInFormValues
-  ) => {
-    console.log(formData);
-  };
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit(() =>
+        signIn("google", { callbackUrl: "http://localhost:3000/dashboard" })
+      )}
+    >
       <Box>
-        <InputLabel>Input</InputLabel>
+        <InputLabel>Gmail</InputLabel>
         <Controller
-          name="input"
+          name="gmail"
           control={control}
           render={({ field }) => (
             <TextField
               {...field}
-              label="input"
-              error={!!errors.input}
-              helperText={errors.input?.message as React.ReactNode}
+              label="gmail"
+              error={!!errors.gmail}
+              helperText={errors.gmail?.message as React.ReactNode}
             />
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Login with Gamil</Button>
       </Box>
     </form>
   );

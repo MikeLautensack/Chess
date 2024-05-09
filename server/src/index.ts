@@ -15,7 +15,7 @@ import { chatHandler } from "./chatroomHandler";
 const app = express();
 const server = createServer(app);
 export const io = new Server(server);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello World!");

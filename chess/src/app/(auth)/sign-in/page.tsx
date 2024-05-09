@@ -1,11 +1,12 @@
+import SignInForm from "@/components/SignInForm";
 import React from "react";
 
 const Page = () => {
   return (
     <div>
-      Sign In
+      <SignInForm />
     </div>
   );
-}
+};
 
 export default Page;
