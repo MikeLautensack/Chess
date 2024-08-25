@@ -14,3 +14,5 @@ export const gameroomSocket = io("http://localhost:5000/gameroom", {
 export const chatroomSocket = io("http://localhost:5000/chat", {
   autoConnect: false,
 });
+
+// test
