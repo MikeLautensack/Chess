@@ -14,7 +14,7 @@ export default async function page() {
       <div className="border-2 border-red-500 flex gap-12">
         <div className="border-1 rounded-lg border-green-500">
           <p>Lobbys</p>
-          <Lobbys />
+          <Lobbys username={session?.user?.name!} />
         </div>
         <div className="border-1 rounded-lg border-green-500">
           <p>Gamerooms</p>
